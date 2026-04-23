@@ -9,31 +9,37 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="header" class="bg-slate-800 sticky top-0 z-50">
   <div class="">
     <ul class="text-white flex justify-center gap-24 font-semibold py-4 tracking-wide text-sm">
-        <li>Características</li>
-        <li>Inicio</li>
-        <li>Testimonios</li>
+        <li class="cursor-pointer hover:text-slate-300">Características</li>
+        <li class="cursor-pointer hover:text-slate-300">Inicio</li>
+        <li class="cursor-pointer hover:text-slate-300">Testimonios</li>
     </ul>
   </div>
 </section>
 
 <section id="body" class="mt-34">
-    <div class="flex justify-center gap-20 sm:gap-40 lg:gap-60 xl:gap-140">
-    
+    <div class="flex items-center justify-center gap-20 sm:gap-40 lg:gap-60 xl:gap-140 mx-6">
         <div class="text-center">
-            <h1 class="flex justify-center text-3xl text-slate-800 font-bold tracking-wide mb-4">Noseque</h1>
-            <p class="">sjddjsjdjdsj dsakaiwejd kskdak</p>
-            <p class="">sjddjsjdjdsj dsakaiwejd kskdak fdfd dc</p>
-            <p class="">sjddjsjdjdsj dsakaiwejd kskdak</p>
+            <h1 class="flex justify-center text-xl md:text-3xl text-slate-800 font-bold tracking-wide mb-4">
+                Noseque
+            </h1>
+            <p class="text-sm md:text-base">sjddjsjdjdsj dsakaiwejd kskdak</p>
+            <p class="text-sm md:text-base">sjddjsjdjdsj dsakaiwejd kskdak fdfd dc</p>
+            <p class="text-sm md:text-base">sjddjsjdjdsj dsakaiwejd kskdak</p>
         </div>
         
-        <div class="text-center bg-black w-50 h-30">
+        <div class="text-center bg-black w-60 h-30 md:w-90 md:h-50 rounded-lg">
             
         </div>
         
     </div>
     
-    <div class="flex justify-center mt-14">
-        <p class="bg-red-300 px-2">jojjoo</p>
+    <div class="flex items-center gap-1.5 justify-center mt-20 tracking-wide">
+        <p class="text-sm md:text-base">Quieres</p>
+        
+        <p class="text-lg md:text-xl text-slate-800 font-bold">ver más?</p>
+    </div>
+    <div class="flex justify-center mt-4">
+        <p class="bg-red-500 cursor-pointer border-1 border-red-200 px-4 py-1 rounded-lg tracking-wide text-white text-sm font-bold shadow-md">Ver más</p>
     </div>
     
 </section>
