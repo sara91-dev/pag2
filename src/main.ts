@@ -17,7 +17,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 </section>
 
 <section id="body" class="mt-20 md:mt-34">
-    <div class="flex items-center flex-col md:flex-row justify-center gap-10 md:gap-20 lg:gap-60 xl:gap-100 2xl:gap-140 mx-6">
+    <div class="flex items-center flex-col md:flex-row justify-center gap-10 md:gap-30 lg:gap-60 xl:gap-100 2xl:gap-140 mx-6">
         <div class="text-center">
             <h1 class="flex justify-center text-xl md:text-3xl text-slate-800 font-bold tracking-wide mb-4">
                 Noseque
@@ -40,6 +40,19 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
     <div class="flex justify-center mt-4">
         <p class="bg-rose-300 cursor-pointer border-1 border-rose-200 px-4 py-1 rounded-lg tracking-wide text-white text-sm font-bold shadow-md">Ver más</p>
+    </div>
+    
+    
+    <div class="mt-14">
+        <hr class="border-t border border-red-300"/>
+        <div class="flex justify-center">
+            <ul class="my-4">
+                <li>dfsdfdsd</li>
+                <li>dfsdfdsd</li>
+                <li>dfsdfdsd</li>
+            </ul>
+        </div>
+        <hr class="border-t border border-red-300"/>
     </div>
     
 </section>
