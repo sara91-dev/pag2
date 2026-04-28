@@ -1,17 +1,13 @@
 import './style.css'
-import typescriptLogo from './assets/typescript.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import { setupCounter } from './counter.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 <section id="header" class="bg-slate-800 sticky top-0 z-50">
   <div class="">
-    <ul class="text-white flex justify-center gap-24 font-semibold py-4 tracking-wide text-sm">
-        <li class="cursor-pointer hover:text-slate-300">Características</li>
+    <ul class="text-white flex justify-center gap-24 lg:gap-36 font-semibold py-4 tracking-wide text-sm">
+        <li class="cursor-pointer hover:text-slate-300">Información</li>
         <li class="cursor-pointer hover:text-slate-300">Inicio</li>
-        <li class="cursor-pointer hover:text-slate-300">Testimonios</li>
+        <li class="cursor-pointer hover:text-slate-300">Contacto</li>
     </ul>
   </div>
 </section>
@@ -19,7 +15,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="body" class="mt-20 md:mt-34">
     <div class="flex items-center flex-col md:flex-row justify-center gap-10 md:gap-30 lg:gap-60 xl:gap-100 2xl:gap-140 mx-6">
         <div class="text-center">
-            <h1 class="flex justify-center md:text-2xl font-semibold text-gray-600 tracking-wider mb-4">
+            <h1 class="flex justify-center text-xl md:text-2xl font-semibold text-gray-600 tracking-wider mb-4">
                 Noseque
             </h1>
             <p class="text-sm lg:text-base">sjddjsjdjdsj dsakaiwejd kskdak</p>
@@ -32,28 +28,43 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         
     </div>
     
-    <div class="flex items-baseline justify-center gap-1.5 mt-20 tracking-wide">
+    <div class="flex items-baseline justify-center gap-1.5 mt-12 md:mt-20 tracking-wide">
         <p class="text-xs md:text-sm">Quieres</p>
         
-        <p class="md:text-lg text-slate-800 font-bold">ver más?</p>
+        <p class="md:text-lg text-red-800 font-bold">ver más?</p>
     </div>
     <div class="flex justify-center mt-4">
-        <p class="bg-rose-300 cursor-pointer border-1 border-rose-200 px-4 py-1 rounded-lg tracking-wide text-white text-sm font-bold shadow-md">Ver más</p>
+        <p class="bg-red-800 cursor-pointer border-1 border-red-600 px-4 py-1 rounded-lg tracking-wide text-white text-sm font-bold shadow-md">Ver más</p>
     </div>
     
     
     
-    <div class="mt-28 mb-20">
+    <div class="flex flex-col items-center mt-20 md:mt-28 mb-20">
+        <h3 class="text-xl font-semibold tracking-wider mb-12">joejje jeje características cortas</h3>
+            <div class="border border-white bg-gray-100 shadow-inner w-100 h-72 md:w-120 lg:w-140 xl:h-76 xl:w-160 2xl:w-180 rounded-lg">
+                <ul class="m-4 text-sm tracking-wide">
+                    <li class="mt-8 mb-4 mx-4 bg-slate-600 border border-slate-200 p-1.5 rounded-lg text-white font-semibold">fdfsdfd</li>
+                    <li class="mb-4 mx-4 bg-white border border-slate-200 p-1.5 rounded-lg text-slate-600 font-semibold">fdfsdfd</li>
+                    <li class="mb-4 mx-4 bg-slate-600 border border-slate-200 p-1.5 rounded-lg text-white font-semibold">fdfsdfd</li>
+                    <li class="mb-4 mx-4 bg-white border border-slate-200 p-1.5 rounded-lg text-slate-600 font-semibold">fdfsdfd (falta botón q te lleva a una pag rellenar info para q me lo mande)</li>
+                </ul>
+                <button>jojo</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="mt-28 mb-10">
         <hr class="border-t border border-red-300 rounded-xl w-3/4 mx-auto"/>
         <div class="flex flex-col items-center my-4">
-            <h3 class="text-xl font-semibold tracking-wider mb-4">joejje jeje</h3>
+            <h3 class="text-xl font-semibold tracking-wider mb-4">joejje jejefaq</h3>
             <ul class="my-4 flex flex-col items-center">
                 <li class="">dfsdfdsd dfdsfd ffsd</li>
                 <li class="text-gray-700 text-sm">jejsajs jsjjaks</li>
-                <hr class="border-t border border-rose-200 w-4/5 my-4"></hr>
+                <hr class="border-t border border-rose-200 w-4/5 my-4"/>
                 <li class="mt-2">dfsdfdsd dfdsfd ffsd</li>
                 <li class="text-gray-700 text-sm">jejsajs jsjjaks</li>
-                <hr class="border-t border border-rose-200 w-4/5 my-4"></hr>
+                <hr class="border-t border border-rose-200 w-4/5 my-4"/>
                 <li class="mt-2">dfsdfdsd dfdsfd ffsd</li>
                 <li class="text-gray-700 text-sm">jejsajs jsjjaks</li>
             </ul>
@@ -62,19 +73,38 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
     
     
-    <div class="mt-24 lg:mt-32 mb-38 flex flex-col items-center w-full px-10">
-        <h3 class="mb-10 tracking-wider text-xl font-semibold text-gray-600">jeje jeje?</h3>
-        <div class="flex flex-col lg:flex-row justify-center gap-16 lg:gap-24 xl:gap-36 2xl:gap-48">
-            <div class="border-2 border-gray-100 border-gray-200 shadow-lg w-90 h-50 md:w-110 md:h-60 xl:w-120 xl:h-80 rounded-lg">
+    <div class="mt-18 md:mt-20 lg:mt-24 mb-38 flex flex-col items-center w-full px-10">
+        <h3 class="mb-12 lg:mb-18 tracking-wider text-xl font-semibold text-gray-600">jeje jeje?</h3>
+        
+        <div class="flex flex-col lg:flex-row justify-center gap-16 lg:gap-24 xl:gap-36 2xl:gap-56">
+            <div class="flex flex-col items-center border-2 border-gray-100 shadow-lg w-90 h-50 md:w-110 md:h-60 xl:w-120 xl:h-80 rounded-lg pt-6">
+                <h4 class="tracking-wide font-bold text-blue-900">jeje jsas info? mandar correo con info</h4>
+                <p class="text-sm mt-6 tracking-wide">dfjhdsfjd fdshjsfdhjfd hjfdsshjhsfd hsdh</p>
+                
+                <div class="flex flex-col">
+                    <label class="text-gray-400 italic text-sm mt-6 self-start">dfdsfdsf fdsf</label>
+                    <input type="text" placeholder="tucorreo@gmail.com" class="py-1.5 px-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-gray-200 focus:border-transparent transition caret-gray-400 text-sm"/>
+                </div>
+                <button>jojo</button>
             </div>
-            <div class="border-2 border-gray-100 border-gray-200 shadow-lg w-90 h-50 md:w-110 md:h-60 xl:w-120 xl:h-80 rounded-lg">
+            
+            <div class="border-2 border-gray-100 shadow-lg w-90 h-50 md:w-110 md:h-60 xl:w-120 xl:h-80 rounded-lg pt-6">
+                <h4 class="tracking-wide font-bold text-center text-blue-900">jeje jsas iconos redes</h4>
+                <div class="mt-6 grid grid-cols-4 text-center">
+                    <p>sdss</p>
+                    <p>sdss</p>
+                    <p>sdss</p>
+                    <p>sdss</p>
+                    <p>sdss</p>
+                </div>
             </div>
         </div>
+        
     </div>
     
 </section>
 
 
+
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
