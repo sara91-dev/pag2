@@ -43,16 +43,22 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
     
     
-    <div class="mt-14">
-        <hr class="border-t border border-red-300"/>
-        <div class="flex justify-center">
-            <ul class="my-4">
-                <li>dfsdfdsd</li>
-                <li>dfsdfdsd</li>
-                <li>dfsdfdsd</li>
+    <div class="mt-28 mb-20">
+        <hr class="border-t border border-red-300 rounded-xl w-3/4 mx-auto"/>
+        <div class="flex flex-col items-center my-4">
+            <h3 class="text-xl font-semibold tracking-wider mb-4">joejje jeje</h3>
+            <ul class="my-4 flex flex-col items-center">
+                <li class="">dfsdfdsd dfdsfd ffsd</li>
+                <li class="text-gray-700 text-sm">jejsajs jsjjaks</li>
+                <hr class="border-t border border-rose-200 w-4/5 my-4"></hr>
+                <li class="mt-2">dfsdfdsd dfdsfd ffsd</li>
+                <li class="text-gray-700 text-sm">jejsajs jsjjaks</li>
+                <hr class="border-t border border-rose-200 w-4/5 my-4"></hr>
+                <li class="mt-2">dfsdfdsd dfdsfd ffsd</li>
+                <li class="text-gray-700 text-sm">jejsajs jsjjaks</li>
             </ul>
         </div>
-        <hr class="border-t border border-red-300"/>
+        <hr class="border-t border-2 border-red-300 rounded-xl w-3/4 mx-auto"/>
     </div>
     
 </section>
