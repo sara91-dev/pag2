@@ -13,59 +13,100 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 </section>
 
 <section id="body" class="mt-20 md:mt-34">
-    <div class="flex items-center flex-col md:flex-row justify-center gap-10 md:gap-30 lg:gap-60 xl:gap-100 2xl:gap-140 mx-6">
-        <div class="text-center">
-            <h1 class="flex justify-center text-xl md:text-2xl font-semibold text-gray-500 tracking-wider">
+    <div class="flex items-center flex-col md:flex-row justify-center gap-10 md:gap-30 lg:gap-60 xl:gap-100 2xl:gap-120 mx-6">
+        <div class="flex flex-col justify-center">
+            <h1 class="flex justify-center text-xl md:text-2xl font-semibold tracking-wider bg-gradient-to-r from-slate-700 to-slate-400 bg-clip-text text-transparent ">
                 Noseque
             </h1>
-            <h2 class="flex justify-center text-lg md:text-xl font-semibold text-gray-600 tracking-wider mb-4">
+            <h2 class="flex justify-center text-lg md:text-xl font-semibold tracking-wider mb-4 bg-gradient-to-r from-slate-500 to-slate-400 bg-clip-text text-transparent ">
                 Nosequefdgfdg
             </h2>
-            <p class="text-gray-800 text-sm lg:text-base">sjddjsjdjdsj dsakaiwejd kskdak</p>
-            <p class="text-gray-800 text-sm lg:text-base">sjddjsjdjdsj dsakaiwejd kskdak fdfd dc</p>
-            <p class="text-gray-800 text-sm lg:text-base">sjddjsjdjdsj dsakaiwejd kskdak</p>
-        </div>
-        
-        <div class="text-center bg-black w-60 h-30 md:w-90 md:h-50 rounded-lg">
+            <p class="text-gray-800 text-sm lg:text-base flex justify-center">• sjddjsjdjdsj dsakaiwejd kskdak</p>
+            <p class="text-gray-800 text-sm lg:text-base flex justify-center">• sjddjsjdjdsj dsakaiwejd kskdak fdfd dc</p>
+            <p class="text-gray-800 text-sm lg:text-base flex justify-center">• sjddjsjdjdsj dsakaiwejd kskdak</p>
+            <span class="mt-2 text-center px-3 py-1 mb-4 text-xs font-semibold tracking-widest text-indigo-600 uppercase bg-indigo-100 rounded-full">
+                jjejej jojoj
+            </span>
+            </div>
+                                
+        <div class="text-center bg-black w-60 h-30 md:w-120 md:h-72 rounded-lg">
         </div>
         
     </div>
     
     <div class="flex items-baseline justify-center gap-1.5 mt-12 md:mt-20 tracking-wide">
-        <p class="text-gray-800 text-xs md:text-sm">Quieres</p>
+        <p class="text-gray-800 text-xs md:text-sm">Te</p>
         
-        <p class="md:text-lg text-indigo-800 font-bold">ver más?</p>
+        <p class="md:text-lg text-indigo-800 font-bold">interesa?</p>
     </div>
     <div class="flex justify-center mt-4">
         <button class="transition duration-300 ease-in-out transform hover:scale-105 bg-indigo-800 hover:bg-indigo-700 cursor-pointer border-1 border-indigo-600 px-4 py-1 rounded-full tracking-wide text-white text-sm font-bold shadow-md">Ver más</button>
     </div>
     
     
-    <div class="my-24 lg:mb-26 lg:mt-30 bg-slate-900 w-full h-140 ">
+    <div class="my-18 lg:my-24 lg:mb-26 lg:mt-30 bg-slate-900 w-full h-150 lg:h-170 flex flex-col items-center ">
         <div class="flex flex-col items-center pt-8 tracking-wider font-bold">
-            <h2 class="text-white text-lg">jejejjeje jeje</h2>
-            <h3 class="text-white">jojooje</h3>
+            <h1 class="flex justify-center text-xl md:text-2xl font-semibold text-gray-500 tracking-wider">
+                Noseque
+            </h1>
+            <h2 class="flex justify-center text-lg md:text-xl font-semibold text-gray-400 tracking-wider mb-4">
+                Nosequefdgfdg
+            </h2>
         </div>
-        <div class="text-white mt-18 text-center text-sm tracking-wide">
-            <p>dsdsadsasaddssa</p>
-            <p>dsdsadsasaddssasddasdsad</p>
-            <p>dsdsadsasaddssa dsdsadsasaddssa</p>
+        
+        <div class="mt-12 lg:mt-18 flex lg:flex-row items-center justify-center gap-60">
+            <div class="justify-center text-white text-center text-sm tracking-wide max-w-md">
+                
+                <div class="mt-6">
+                    <p>dsdsadsasaddssa dsdsadsasaddssa</p>
+                    <p>dsdsadsasaddssasddasdsad</p>
+                    <p>dsdsadsasaddssa</p>
+                </div>
+                <div class="mt-6">
+                    <p>dsdsadsasaddssa</p>
+                    <p>dsdsadsasaddssasddasdsad dsdsadsasaddssasddasdsad</p>
+                    <p>dsdsadsasaddsssdaa dsdsadsasaddsssdaa</p>
+                    <p>dsdsadsasaddsssdaa</p>
+                </div>
+                <div class="mt-6">
+                    <p>dsdsadsasaddssa</p>
+                    <p>dsdsadsasaddssasddasdsad dsdsadsasaddssasddasdsad</p>
+                    <p>dsdsadsasaddsssdaa dsdsadsasaddsssdaa</p>
+                    <p>dsdsadsasaddsssdaa</p>
+                </div>
+            </div>
+            
+            <div class="hidden lg:block justify-center text-white text-center text-sm tracking-wide max-w-md">
+                <div class="mt-6">
+                    <p>dsdsadsasaddssa dsdsadsasaddssa</p>
+                    <p>dsdsadsasaddssasddasdsad</p>
+                    <p>dsdsadsasaddssa</p>
+                </div>
+                <div class="mt-6">
+                    <p>dsdsadsasaddssa</p>
+                    <p>dsdsadsasaddssasddasdsad dsdsadsasaddssasddasdsad</p>
+                    <p>dsdsadsasaddsssdaa dsdsadsasaddsssdaa</p>
+                    <p>dsdsadsasaddsssdaa</p>
+                </div>
+                <div class="mt-6">
+                    <p>dsdsadsasaddssa</p>
+                    <p>dsdsadsasaddssasddasdsad dsdsadsasaddssasddasdsad</p>
+                    <p>dsdsadsasaddsssdaa dsdsadsasaddsssdaa</p>
+                    <p>dsdsadsasaddsssdaa</p>
+                </div>
+            </div>
         </div>
-        <div class="text-white mt-6 text-center text-sm">
-            <p>dsdsadsasaddssa dsdsadsasaddssa</p>
-            <p>dsdsadsasaddssasddasdsad</p>
-            <p>dsdsadsasaddssa</p>
+        
+        <div class="flex items-baseline gap-1.5 mt-8 lg:mt-20 tracking-wide">
+            <p class="text-white text-xs md:text-sm">Quieres</p>
+            <p class="md:text-lg text-white font-bold">ver más?</p>
         </div>
-           <div class="text-white mt-6 text-center text-sm">
-            <p>dsdsadsasaddssa</p>
-            <p>dsdsadsasaddssasddasdsad dsdsadsasaddssasddasdsad</p>
-            <p>dsdsadsasaddsssdaa dsdsadsasaddsssdaa</p>
-            <p>dsdsadsasaddsssdaa</p>
+        <div class="flex justify-center mt-4">
+            <button class="transition duration-300 ease-in-out transform hover:scale-105 bg-white hover:bg-indigo-500 hover:border-indigo-400 hover:text-white cursor-pointer border-1 border-gray-100 px-4 py-1 rounded-full tracking-wide text-indigo-800 text-sm font-bold shadow-md">Ver más</button>
         </div>
-        <button class="mt-18 xl:mt-22 block mx-auto cursor-pointer mt-4 xl:mt-6 px-6 py-2 bg-gray-200 border border-gray-300 text-gray-700 font-medium rounded-lg text-sm tracking-wider transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95">
-            jojo
-        </button>
+        
     </div>
+
     
     
     <div class="flex flex-col items-center mt-20 md:mt-28 mb-20">
@@ -101,7 +142,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                         <span>fdfsdfd</span>
                     </li>
                 </ul>
-                <button class="block mx-auto cursor-pointer mt-4 xl:mt-6 px-6 py-2 bg-gray-200 border border-gray-300 text-gray-700 font-medium rounded-lg text-sm tracking-wider transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95">
+                <button class="block mx-auto cursor-pointer mt-4 xl:mt-6 px-6 py-2 bg-gray-200 border border-gray-300 text-gray-700 font-medium rounded-full text-sm tracking-wider transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95">
                   jojo
                 </button>
             </div>
@@ -140,10 +181,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                     <label class="text-indigo-400 italic text-sm mt-6 self-start">dfdsfdsf fdsf</label>
                     <input type="text" placeholder="tucorreo@gmail.com" class="py-1.5 px-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-transparent transition caret-gray-400 text-sm text-gray-700"/>
                 </div>
-                <button class="block mx-auto cursor-pointer mt-4 xl:mt-6 px-6 py-2 bg-gray-200 border border-gray-300 text-gray-700 font-medium rounded-lg text-sm tracking-wider transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95">
+                <button class="block mx-auto cursor-pointer mt-4 xl:mt-6 px-6 py-2 bg-gray-200 border border-gray-300 text-gray-700 font-medium rounded-full text-sm tracking-wider transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95">
                   jojo
                 </button>
-                            </div>
+            </div>
             
             <div class="border-2 border-gray-100 shadow-lg w-90 h-50 md:w-100 xl:w-120  rounded-lg pt-6">
                 <h4 class="tracking-wide font-bold text-center text-slate-800">jeje jsas iconos redes</h4>
