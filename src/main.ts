@@ -38,6 +38,32 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
     
     
+    <div class="my-24 lg:mb-26 lg:mt-30 bg-black w-full h-140 ">
+        <div class="flex flex-col items-center pt-8 tracking-wider font-bold">
+            <h2 class="text-white text-lg">jejejjeje jeje</h2>
+            <h3 class="text-white">jojooje</h3>
+        </div>
+        <div class="text-white mt-18 text-center text-sm tracking-wide">
+            <p>dsdsadsasaddssa</p>
+            <p>dsdsadsasaddssasddasdsad</p>
+            <p>dsdsadsasaddssa dsdsadsasaddssa</p>
+        </div>
+        <div class="text-white mt-6 text-center text-sm">
+            <p>dsdsadsasaddssa dsdsadsasaddssa</p>
+            <p>dsdsadsasaddssasddasdsad</p>
+            <p>dsdsadsasaddssa</p>
+        </div>
+           <div class="text-white mt-6 text-center text-sm">
+            <p>dsdsadsasaddssa</p>
+            <p>dsdsadsasaddssasddasdsad dsdsadsasaddssasddasdsad</p>
+            <p>dsdsadsasaddsssdaa dsdsadsasaddsssdaa</p>
+            <p>dsdsadsasaddsssdaa</p>
+        </div>
+        <button class="mt-18 xl:mt-22 block mx-auto cursor-pointer mt-4 xl:mt-6 px-6 py-2 bg-gray-200 border border-gray-300 text-gray-700 font-medium rounded-lg text-sm tracking-wider transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95">
+            jojo
+        </button>
+    </div>
+    
     
     <div class="flex flex-col items-center mt-20 md:mt-28 mb-20">
         <h3 class="text-gray-500 text-xl font-semibold tracking-wider mb-12">joejje jeje características cortas</h3>
@@ -133,9 +159,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     
 </section>
 
-<section id="footer" class="border border-t-indigo-500 bg-indigo-300/20">
-    <div class="pb-12">
-        <p>dsadsad</p>
+<section id="footer" class="border border-t-slate-600 bg-slate-800">
+    <div class="pb-6 m-2">
+        <p class="text-white">dsadsad</p>
     </div>
 </section>
 
