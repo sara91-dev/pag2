@@ -4,10 +4,13 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 <section id="header" class="bg-slate-800/70 backdrop-blur-lg sticky top-0 z-50">
   <div class="">
-    <ul class="text-white flex justify-center gap-24 lg:gap-36 font-semibold py-4 tracking-wide text-sm">
-        <li class="cursor-pointer hover:text-slate-300">Información</li>
-        <li class="cursor-pointer hover:text-slate-300">Inicio</li>
-        <li class="cursor-pointer hover:text-slate-300">Contacto</li>
+    <ul class="text-white flex justify-center gap-24 lg:gap-36 font-semibold py-6 md:py-4 tracking-wide text-sm">
+        <li class="md:hidden absolute left-5 top-2.5 item-start cursor-pointer bg-black h-8 w-8 rounded-lg"></li>
+        <li class="hidden md:block absolute left-5 top-2.5 item-start cursor-pointer bg-black h-8 w-8 rounded-lg"></li>
+        <li class="hidden md:block cursor-pointer hover:text-slate-300">Información</li>
+        <li class="hidden md:block cursor-pointer hover:text-slate-300">Inicio</li>
+        <li class="hidden md:block cursor-pointer hover:text-slate-300">Contacto</li>
+        <li class="hidden md:block absolute right-5 top-2 shadow-lg item-start cursor-pointer bg-gray-300 px-4 py-1.5 text-white  rounded-full font-normal">sdfsdsfdf</li>
     </ul>
   </div>
 </section>
