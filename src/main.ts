@@ -10,7 +10,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <li class="hidden md:block cursor-pointer hover:text-slate-300">Información</li>
         <li class="hidden md:block cursor-pointer hover:text-slate-300">Inicio</li>
         <li class="hidden md:block cursor-pointer hover:text-slate-300">Contacto</li>
-        <li class="hidden md:block absolute right-5 top-2 shadow-lg item-start cursor-pointer bg-gray-300 px-4 py-1.5 text-white  rounded-full font-normal">sdfsdsfdf</li>
+        <li class="hidden md:block border-0 absolute right-5 top-3.5 item-start uppercase cursor-pointer bg-gray-100 px-4 py-1 text-gray-600  rounded-full font-semibold text-xs">iniciar sesión</li>
     </ul>
   </div>
 </section>
