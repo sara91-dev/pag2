@@ -1,16 +1,19 @@
 import './style.css'
 
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 <section id="header" class="bg-slate-800/70 backdrop-blur-lg sticky top-0 z-50">
   <div class="">
-    <ul class="text-white flex justify-center gap-24 lg:gap-36 font-semibold py-6 md:py-4 tracking-wide text-sm">
-        <li class="md:hidden absolute left-5 top-2.5 item-start cursor-pointer bg-black h-8 w-8 rounded-lg"></li>
-        <li class="hidden md:block absolute left-5 top-2.5 item-start cursor-pointer bg-black h-8 w-8 rounded-lg"></li>
-        <li class="hidden md:block cursor-pointer hover:text-slate-300">Información</li>
-        <li class="hidden md:block cursor-pointer hover:text-slate-300">Inicio</li>
-        <li class="hidden md:block cursor-pointer hover:text-slate-300">Contacto</li>
-        <li class="hidden md:block border-0 absolute right-5 top-3.5 item-start uppercase cursor-pointer bg-gray-100 px-4 py-1 text-gray-600  rounded-full font-semibold text-xs">iniciar sesión</li>
+    <ul class="text-white flex justify-center gap-24 lg:gap-36 font-semibold py-6 sm:py-4 tracking-wide text-sm">
+        <li class="sm:hidden absolute left-5 top-2.5 item-start cursor-pointer bg-white h-8 w-8 rounded-lg"></li>
+        <li class="hidden sm:block absolute left-5 top-1.5 item-start cursor-pointer h-10 w-10 rounded-lg">
+            <img src="/logo.png" alt="logo" class="h-full w-full object-cover rounded-lg"/>
+        </li>
+        <li class="hidden sm:block cursor-pointer hover:text-slate-300">Información</li>
+        <li class="hidden sm:block cursor-pointer hover:text-slate-300">Inicio</li>
+        <li class="hidden sm:block cursor-pointer hover:text-slate-300">Contacto</li>
+        <li class="hidden lg:block border-0 absolute right-5 top-3.5 item-start uppercase cursor-pointer bg-gray-100 px-4 py-1 text-gray-600  rounded-full font-semibold text-xs">iniciar sesión</li>
     </ul>
   </div>
 </section>
@@ -110,8 +113,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         
     </div>
 
-    
-    
+
     <div class="flex flex-col items-center mt-20 md:mt-28 mb-20">
         <h3 class="text-gray-500 text-xl font-semibold tracking-wider mb-12">joejje jeje características cortas</h3>
             <div class="border border-white bg-slate-100 shadow-inner w-100 h-72 md:w-120 lg:w-140 xl:h-76 xl:w-160 2xl:w-180 rounded-lg">
@@ -190,14 +192,66 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             </div>
             
             <div class="border-2 border-gray-100 shadow-lg w-90 h-50 md:w-100 xl:w-120  rounded-lg pt-6">
-                <h4 class="tracking-wide font-bold text-center text-slate-800">jeje jsas iconos redes</h4>
+                <h4 class="tracking-wide font-bold text-center text-slate-800">Redes sociales</h4>
                 <div class="mt-8 grid grid-cols-3 gap-y-4 justify-items-center">
-                    <div class="bg-black w-10 h-10 rounded-lg"></div>
-                    <div class="bg-black w-10 h-10 rounded-lg"></div>
-                    <div class="bg-black w-10 h-10 rounded-lg"></div>
-                    <div class="bg-black w-10 h-10 rounded-lg"></div>
-                    <div class="bg-black w-10 h-10 rounded-lg"></div>
-                    <div class="bg-black w-10 h-10 rounded-lg"></div>
+                
+                    <div class="bg-slate-800 w-10 h-10 rounded-lg flex justify-center items-center shadow-lg">
+                        <a href="https://instagram.com" target="_blank" class="text-pink-400 hover:text-pink-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                               class="w-8 h-8 fill-current">
+                            <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm0 2A2.5 2.5 0 1 1 9.5 12 2.5 2.5 0 0 1 12 9.5z"/>
+                          </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="bg-slate-800 w-10 h-10 rounded-lg flex justify-center items-center shadow-lg">
+                        <a href="https://github.com" target="_blank" class="text-white hover:text-gray-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                               class="w-8 h-8 fill-current">
+                            <path d="M12 .5C5.73.5.75 5.7.75 12c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.56v-2.1c-3.2.7-3.87-1.4-3.87-1.4-.53-1.3-1.3-1.65-1.3-1.65-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.8 2.73 1.3 3.4 1 .1-.77.4-1.3.73-1.6-2.55-.3-5.23-1.3-5.23-5.7 0-1.3.45-2.3 1.2-3.1-.1-.3-.52-1.5.12-3.1 0 0 1-.3 3.3 1.2a11.2 11.2 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.64 1.6.22 2.8.12 3.1.75.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.3.75 1 .75 2.1v3.1c0 .3.2.65.8.55A10.8 10.8 0 0 0 23.25 12C23.25 5.7 18.27.5 12 .5z"/>
+                          </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="bg-slate-800 w-10 h-10 rounded-lg flex justify-center items-center shadow-lg">
+                        <a href="https://youtube.com" target="_blank" class="text-red-500 hover:text-red-400">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                               class="w-8 h-8 fill-current">
+                            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.5 15.5v-7l6 3.5-6 3.5z"/>
+                          </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="bg-slate-800 w-10 h-10 rounded-lg flex justify-center items-center shadow-lg">
+                        <a href="https://tiktok.com" target="_blank" class="text-white hover:text-pink-300">
+                          <svg xmlns="http://www.w3.org/2000/svg"
+                               viewBox="0 0 24 24"
+                               class="w-8 h-8 fill-current">
+                            <path d="M16.6 1c.3 2.6 1.8 4.2 4.4 4.4v3.1c-1.8.1-3.4-.4-4.4-1.3v7.3c0 3.7-3 6.8-6.8 6.8S3 18.2 3 14.5 6 7.7 9.8 7.7c.5 0 1 .1 1.5.2v3.5c-.5-.2-1-.3-1.5-.3-1.8 0-3.3 1.5-3.3 3.3s1.5 3.3 3.3 3.3 3.4-1.5 3.4-3.3V1h3.4z"/>
+                          </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="bg-slate-800 w-10 h-10 rounded-lg flex justify-center items-center shadow-lg">
+                        <a href="https://facebook.com" target="_blank" class="text-blue-500 hover:text-blue-400">
+                          <svg xmlns="http://www.w3.org/2000/svg"
+                               viewBox="0 0 24 24"
+                               class="w-8 h-8 fill-current">
+                            <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-3h2.4V9.3c0-2.4 1.4-3.7 3.6-3.7 1 0 2 .1 2 .1v2.3h-1.1c-1.1 0-1.5.7-1.5 1.4V12H16l-.5 3h-2v7A10 10 0 0 0 22 12z"/>
+                          </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="bg-slate-800 w-10 h-10 rounded-lg flex justify-center items-center shadow-lg">
+                        <a href="https://twitter.com" target="_blank" class="text-white hover:text-gray-300">
+                          <svg xmlns="http://www.w3.org/2000/svg"
+                               viewBox="0 0 24 24"
+                               class="w-8 h-8 fill-current">
+                            <path d="M18.244 2H21.5l-7.59 8.694L22 22h-6.828l-5.34-6.918L3.8 22H.5l8.02-9.19L2 2h6.95l4.79 6.2L18.244 2zm-1.2 18h1.9L6.1 4h-2L17.044 20z"/>
+                          </svg>
+                        </a>
+                    </div>
+                
                 </div>
             </div>
         </div>
@@ -206,9 +260,17 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     
 </section>
 
-<section id="footer" class="border border-t-slate-600 bg-slate-800">
-    <div class="pb-6 m-2">
-        <p class="text-white">dsadsad</p>
+<section id="footer" class="border border-t-slate-600 bg-slate-800 pb-6">
+    <div class="flex flex-row justify-between m-4">
+        <div class="">
+            <p class="text-white text-sm ">© 2026 GRebelAir® Todos los derechos reservados.</p>
+            <p class="text-white text-sm ">GRebelAir es una marca registrada.</p>
+        </div>
+        <div class= "text-white text-sm font-semibold">
+            <a class="mr-12" href="/">Privacidad</a>
+            <a class="mr-12" href="/">Cookies</a>
+            <a class="mr-2" href="/">Aviso legal</a>
+        </div>
     </div>
 </section>
 
