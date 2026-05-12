@@ -175,24 +175,29 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     
     
     <div class="mt-18 md:mt-20 lg:mt-24 mb-38 flex flex-col items-center w-full px-10">
-        <h3 class="mb-12 lg:mb-18 tracking-wider text-xl font-semibold text-gray-500">jeje jeje?</h3>
+        <h3 class="mb-12 lg:mb-18 tracking-wider text-xl font-semibold text-slate-700">Contacto</h3>
         
         <div class="flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-24 xl:gap-36 2xl:gap-56">
            
-            <div class="flex flex-col items-center border-2 border-gray-100 shadow-lg w-90 h-60 md:w-110 md:h-60 xl:w-120 rounded-lg pt-6">
-                <h4 class="tracking-wide font-bold text-slate-800">jeje jsas info? mandar correo con info</h4>
-                <p class="text-sm mt-6 tracking-wide">dfjhdsfjd fdshjsfdhjfd hjfdsshjhsfd hsdh</p>
+            <div class="bg-white relative flex flex-col items-center border-2 border-gray-100 shadow-lg w-90 h-60 md:w-110 md:h-60 xl:w-120 rounded-2xl pt-6">
+                <div class="top-2 left-2 absolute mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h4 class="tracking-wide font-bold text-slate-600">Necesitas más información?</h4>
+                <p class="text-sm mt-4 tracking-wide">Pon tu correo y la obtendrás automáticamente!</p>
                 <div class="flex flex-col">
-                    <label class="text-indigo-400 italic text-sm mt-6 self-start">dfdsfdsf fdsf</label>
+                    <label class="text-indigo-400 uppercase italic text-xs font-semibold mt-8 self-start">Pon aquí tu correo</label>
                     <input type="text" placeholder="tucorreo@gmail.com" class="py-1.5 px-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-transparent transition caret-gray-400 text-sm text-gray-700"/>
                 </div>
-                <button class="block mx-auto cursor-pointer mt-4 xl:mt-6 px-6 py-2 bg-gray-200 border border-gray-300 text-gray-700 font-medium rounded-full text-sm tracking-wider transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95">
-                  jojo
+                <button class="block mx-auto cursor-pointer mt-4 xl:mt-6 px-4 py-2 bg-gray-200 border border-gray-300 text-gray-700 font-medium rounded-full text-sm tracking-wider transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95">
+                  Aceptar
                 </button>
             </div>
             
-            <div class="border-2 border-gray-100 shadow-lg w-90 h-56 md:w-100 xl:w-120  rounded-lg pt-4">
-                <h4 class="tracking-wide font-bold text-center text-slate-800">Redes sociales</h4>
+            <div class="bg-white border-2 border-gray-100 shadow-lg w-90 h-56 md:w-100 xl:w-120  rounded-2xl pt-4">
+                <h4 class="tracking-wide font-bold text-center text-slate-600">Redes sociales</h4>
                 <div class="mt-10 grid grid-cols-3 gap-y-8 justify-items-center">
                 
                     <div class=" w-10 h-10 rounded-lg flex justify-center items-center ">
