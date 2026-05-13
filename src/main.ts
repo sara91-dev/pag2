@@ -180,7 +180,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <div class="flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-24 xl:gap-36 2xl:gap-56">
            
             <div class="bg-white relative flex flex-col items-center border-2 border-gray-100 shadow-lg w-90 h-60 md:w-110 md:h-60 xl:w-120 rounded-2xl pt-6">
-                <div class="top-2 left-2 absolute mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-50">
+                <div class="top-2 left-2 absolute mb-4 flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-indigo-50">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
@@ -188,11 +188,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                 <h4 class="tracking-wide font-bold text-slate-600">Necesitas más información?</h4>
                 <p class="text-sm mt-4 tracking-wide">Pon tu correo y la obtendrás automáticamente!</p>
                 <div class="flex flex-col">
-                    <label class="text-indigo-400 uppercase italic text-xs font-semibold mt-8 self-start">Pon aquí tu correo</label>
+                    <label class="text-indigo-400 mb-1 uppercase italic text-xs font-semibold mt-8 self-start">Pon aquí tu correo</label>
                     <input type="text" placeholder="tucorreo@gmail.com" class="py-1.5 px-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-transparent transition caret-gray-400 text-sm text-gray-700"/>
                 </div>
-                <button class="block mx-auto cursor-pointer mt-4 xl:mt-6 px-4 py-2 bg-gray-200 border border-gray-300 text-gray-700 font-medium rounded-full text-sm tracking-wider transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95">
-                  Aceptar
+                <button class="block mx-auto cursor-pointer text-sm bg-indigo-500 tracking-wide mt-4 px-4 py-1 border-1 border-indigo-400 text-white font-semibold rounded-full hover:bg-white hover:text-indigo-500 transition-all duration-200 active:scale-95">
+                  Aceptar!
                 </button>
             </div>
             
@@ -262,16 +262,16 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     
 </section>
 
-<section id="footer" class="border border-t-slate-600 bg-slate-800 pb-6">
-    <div class="flex flex-row justify-between m-4">
+<section id="footer" class="border border-t-slate-600 bg-slate-800 pb-4">
+    <div class="flex flex-row gap-6 justify-between m-4">
         <div class="">
             <p class="text-white text-sm ">© 2026 GRebelAir® Todos los derechos reservados.</p>
             <p class="text-white text-sm ">GRebelAir es una marca registrada.</p>
         </div>
-        <div class= "text-white text-sm font-semibold">
-            <a class="mr-12" href="/">Privacidad</a>
-            <a class="mr-12" href="/">Cookies</a>
-            <a class="mr-2" href="/">Aviso legal</a>
+        <div class= "flex flex-col lg:flex-row lg:mr-4 gap-1.5 text-white text-sm font-semibold">
+            <a class="mr-12 hover:text-blue-300 hover:underline hover:decoration-1" href="/">Privacidad</a>
+            <a class="mr-12 hover:text-blue-300 hover:underline hover:decoration-1" href="/">Cookies</a>
+            <a class="mr-2 hover:text-blue-300 hover:underline hover:decoration-1" href="/">Aviso legal</a>
         </div>
     </div>
 </section>
