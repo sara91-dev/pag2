@@ -179,7 +179,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         
         <div class="flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-24 xl:gap-36 2xl:gap-56">
            
-            <div class="bg-white relative flex flex-col items-center border-2 border-gray-100 shadow-lg w-90 h-60 md:w-110 md:h-60 xl:w-120 rounded-2xl pt-6">
+            <div class="bg-white relative flex flex-col items-center border-2 border-gray-100 shadow-lg w-90 min-h-[15rem] md:w-110 xl:w-120 rounded-2xl pt-6 pb-6 transition-all duration-300 ease-in-out">    
                 <div class="top-2 left-2 absolute mb-4 flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full bg-indigo-50">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -189,14 +189,25 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                 <p class="text-sm mt-4 tracking-wide">Pon tu correo y la obtendrás automáticamente!</p>
                 <div class="flex flex-col">
                     <label class="text-indigo-400 mb-1 uppercase italic text-xs font-semibold mt-8 self-start">Pon aquí tu correo</label>
-                    <input type="text" placeholder="tucorreo@gmail.com" class="py-1.5 px-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-transparent transition caret-gray-400 text-sm text-gray-700"/>
+                    <input 
+                        type="email" 
+                        id="emailInput"
+                        placeholder="tucorreo@gmail.com" 
+                        class="py-1.5 px-4 border border-gray-300 rounded-xl ring-0 outline-none focus:outline-none focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-transparent transition caret-gray-400 text-sm text-gray-700"
+                    />
+                    <span id="errorMsg" class="text-[10px] text-red-500 mt-1 ml-2 hidden">Correo inválido</span>
                 </div>
-                <button class="block mx-auto cursor-pointer text-sm bg-indigo-500 tracking-wide mt-4 px-4 py-1 border-1 border-indigo-400 text-white font-semibold rounded-full hover:bg-white hover:text-indigo-500 transition-all duration-200 active:scale-95">
-                  Aceptar!
+                <button id="emailInfoBtn" class="flex items-center justify-center gap-2 mx-auto cursor-pointer text-sm bg-indigo-500 tracking-wide mt-4 px-4 py-1 border-1 border-indigo-400 text-white font-semibold rounded-full hover:bg-white hover:text-indigo-500 transition-all duration-200 active:scale-95">
+                    <span id="btnText">¡Aceptar!</span>           
+                    <div id="spinner" class="hidden h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                 </button>
+                
+                <p id="successMsg" class="hidden text-green-600 text-xs font-bold mt-4 animate-bounce">
+                    ✓ ¡Revisa tu bandeja de entrada!
+                </p>                
             </div>
             
-            <div class="bg-white border-2 border-gray-100 shadow-lg w-90 h-56 md:w-100 xl:w-120  rounded-2xl pt-4">
+            <div class="bg-white border-2 border-gray-100 shadow-lg w-90 h-58 md:w-100 xl:w-120  rounded-2xl pt-4">
                 <h4 class="tracking-wide font-bold text-center text-slate-600">Redes sociales</h4>
                 <div class="mt-10 grid grid-cols-3 gap-y-8 justify-items-center">
                 
@@ -263,19 +274,81 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 </section>
 
 <section id="footer" class="border border-t-slate-600 bg-slate-800 pb-4">
-    <div class="flex flex-row gap-6 justify-between m-4">
+    <div class="flex flex-row gap-6 justify-between p-4">
         <div class="">
             <p class="text-white text-sm ">© 2026 GRebelAir® Todos los derechos reservados.</p>
             <p class="text-white text-sm ">GRebelAir es una marca registrada.</p>
         </div>
-        <div class= "flex flex-col lg:flex-row lg:mr-4 gap-1.5 text-white text-sm font-semibold">
-            <a class="mr-12 hover:text-blue-300 hover:underline hover:decoration-1" href="/">Privacidad</a>
-            <a class="mr-12 hover:text-blue-300 hover:underline hover:decoration-1" href="/">Cookies</a>
-            <a class="mr-2 hover:text-blue-300 hover:underline hover:decoration-1" href="/">Aviso legal</a>
+        <div class= "flex flex-col items-center lg:flex-row mr-8 lg:mr-4 gap-1.5 text-white text-sm font-semibold">
+            <a class="lg:mr-12 hover:text-blue-300 hover:underline hover:decoration-1" href="/">Privacidad</a>
+            <a class="lg:mr-12 hover:text-blue-300 hover:underline hover:decoration-1" href="/">Cookies</a>
+            <a class="lg:mr-2 hover:text-blue-300 hover:underline hover:decoration-1" href="/">Aviso legal</a>
         </div>
     </div>
 </section>
 
 
 `
+
+const button = document.getElementById("emailInfoBtn") as HTMLButtonElement;
+const emailInput = document.getElementById("emailInput") as HTMLInputElement;
+const errorMsg = document.getElementById("errorMsg");
+const successMsg = document.getElementById("successMsg");
+const spinner = document.getElementById("spinner");
+const btnText = document.getElementById("btnText");
+
+button?.addEventListener("click", async () => {
+    const email = emailInput.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    errorMsg?.classList.add("hidden");
+    successMsg?.classList.add("hidden");
+
+    if (!email || !emailRegex.test(email)) {
+        emailInput.blur();
+        errorMsg?.classList.remove("hidden");
+        
+        emailInput.classList.add("border-red-500", "ring-2", "ring-red-200");
+
+        setTimeout(() => {
+            errorMsg?.classList.add("hidden");
+            emailInput.classList.remove("border-red-500", "ring-red-200", "ring-2");
+        }, 3000);
+        
+        emailInput.blur();
+        return;
+    }
+
+    button.disabled = true;
+    spinner?.classList.remove("hidden");
+    btnText!.textContent = "Enviando...";
+
+    try {
+        const res = await fetch("http://localhost:3001/mandarCorreo", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email })
+        });
+
+        const data = await res.json();
+
+        if (data.ok) {
+            successMsg?.classList.remove("hidden");
+            emailInput.value = ""; 
+
+            setTimeout(() => {
+                successMsg?.classList.add("hidden");
+            }, 3000);
+
+        } else {
+            alert("Algo salió mal en el servidor.");
+        }
+    } catch (err) {
+        alert("Error de conexión. ¿Encendiste el servidor?");
+    } finally {
+        button.disabled = false;
+        spinner?.classList.add("hidden");
+        btnText!.textContent = "¡Aceptar!";
+    }
+});
 
