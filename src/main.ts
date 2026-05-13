@@ -8,7 +8,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <ul class="text-white flex justify-center gap-24 lg:gap-36 font-semibold py-6 sm:py-4 tracking-wide text-sm">
         <li class="sm:hidden absolute left-5 top-2.5 item-start cursor-pointer bg-white h-8 w-8 rounded-lg"></li>
         <li class="hidden sm:block absolute left-5 top-1.5 item-start cursor-pointer h-10 w-10 rounded-lg">
-            <img src="./public/logo.png" alt="logo" class="h-full w-full object-cover rounded-lg"/>
+            <img src="./logo.png" alt="logo" class="h-full w-full object-cover rounded-lg"/>
         </li>
         <li class="hidden sm:block cursor-pointer hover:text-slate-300">Información</li>
         <li class="hidden sm:block cursor-pointer hover:text-slate-300">Inicio</li>
@@ -115,7 +115,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 
     <div class="flex flex-col items-center mt-20 md:mt-28 mb-20">
-        <h3 class="text-gray-500 text-xl font-semibold tracking-wider mb-12">joejje jeje características cortas</h3>
+        <h3 class="text-gray-500 text-xl font-semibold tracking-wider mb-12">Algunas características</h3>
             <div class="border border-white bg-slate-100 shadow-inner w-100 h-72 md:w-120 lg:w-140 xl:h-76 xl:w-160 2xl:w-180 rounded-lg">
                 <ul class="m-4 text-sm tracking-wide">
                     <li class="relative flex items-center justify-center mt-8 mb-4 mx-4 bg-slate-600 border border-slate-200 p-1.5 rounded-lg text-white font-semibold text-center">
@@ -160,13 +160,22 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         <div class="flex flex-col items-center my-10">
             <h3 class="text-gray-500 text-xl font-semibold tracking-wider mb-4">Hablemos de tus dudas</h3>
             <ul class="mt-6 mb-4 flex flex-col items-start w-full max-w-xs lg:max-w-md mx-auto">
-                <li class="text-slate-800 font-bold mb-2">¿Cuánto tarda?</li>
-                <li class="text-gray-700 text-sm">"El tiempo estimado es de 1 mes y medio, dependiendo del proyecto."</li>
-                <hr class="border-t border border-slate-300 w-full my-4 mx-auto"/>
-                <li class="mt-2 text-slate-800 font-bold mb-2">¿Cómo ver el estado de mi pedido?</li>
-                <li class="text-gray-700 text-sm">"Puedes consultarlo en tu panel personal tras iniciar sesión."</li>
-                <hr class="border-t border border-slate-300 w-full my-4 mx-auto"/>
-                <li class="mt-2 text-slate-800 font-bold mb-2">¿Trabajamos por todo el país?</li>
+                <li class="mt-2 text-indigo-900 font-bold mb-2 flex items-center">
+                    <span class="mr-2 text-indigo-500">●</span> 
+                    ¿Cuánto tarda?
+                </li>                
+                <li class="text-gray-700 text-sm">El tiempo estimado es de 1 mes y medio, dependiendo del proyecto.</li>
+                <hr class="border-t border-slate-300 w-full my-4 mx-auto"/>
+                <li class="mt-2 text-indigo-900 font-bold mb-2 flex items-center">
+                    <span class="mr-2 text-indigo-500">●</span> 
+                    ¿Cómo ver el estado de mi pedido?
+                </li>                
+                <li class="text-gray-700 text-sm">Puedes consultarlo en tu panel personal tras iniciar sesión.</li>
+                <hr class="border-t border-slate-300 w-full my-4 mx-auto"/>
+                <li class="mt-2 text-indigo-900 font-bold mb-2 flex items-center">
+                    <span class="mr-2 text-indigo-500">●</span> 
+                    ¿Trabajamos por todo el país?
+                </li> 
                 <li class="text-gray-700 text-sm">No, nuestro límite es x.</li>
             </ul>
         </div>
@@ -175,7 +184,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     
     
     <div class="mt-18 md:mt-20 lg:mt-24 mb-38 flex flex-col items-center w-full px-10">
-        <h3 class="mb-12 lg:mb-18 tracking-wider text-xl font-semibold text-slate-700">Contacto</h3>
+        <h3 class="mb-12 lg:mb-18 tracking-wider text-xl font-semibold text-slate-500">Contacto</h3>
         
         <div class="flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-24 xl:gap-36 2xl:gap-56">
            
