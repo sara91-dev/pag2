@@ -155,19 +155,19 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
     
     
-    <div class="mt-28 mb-10">
+    <div class="mt-23 mb-10">
         <hr class="border-t border border-indigo-800 rounded-xl w-3/4 mx-auto"/>
-        <div class="flex flex-col items-center my-4">
-            <h3 class="text-gray-500 text-xl font-semibold tracking-wider mb-4">joejje jejefaq</h3>
-            <ul class="mt-6 mb-4 flex flex-col items-start w-full max-w-xs mx-auto">
-                <li class="text-slate-800 font-bold">dfsdfdsd dfdsfd ffsd</li>
-                <li class="text-gray-700 text-sm">jejsajs jsjjaks</li>
-                <hr class="border-t border border-slate-700 w-full my-4 mx-auto"/>
-                <li class="mt-2 text-slate-800 font-bold">dfsdfdsd dfdsfd ffsd</li>
-                <li class="text-gray-700 text-sm">jejsajs jsjjaks</li>
-                <hr class="border-t border border-slate-700 w-full my-4 mx-auto"/>
-                <li class="mt-2 text-slate-800 font-bold">dfsdfdsd dfdsfd ffsd</li>
-                <li class="text-gray-700 text-sm">jejsajs jsjjaks</li>
+        <div class="flex flex-col items-center my-10">
+            <h3 class="text-gray-500 text-xl font-semibold tracking-wider mb-4">Hablemos de tus dudas</h3>
+            <ul class="mt-6 mb-4 flex flex-col items-start w-full max-w-xs lg:max-w-md mx-auto">
+                <li class="text-slate-800 font-bold mb-2">¿Cuánto tarda?</li>
+                <li class="text-gray-700 text-sm">"El tiempo estimado es de 1 mes y medio, dependiendo del proyecto."</li>
+                <hr class="border-t border border-slate-300 w-full my-4 mx-auto"/>
+                <li class="mt-2 text-slate-800 font-bold mb-2">¿Cómo ver el estado de mi pedido?</li>
+                <li class="text-gray-700 text-sm">"Puedes consultarlo en tu panel personal tras iniciar sesión."</li>
+                <hr class="border-t border border-slate-300 w-full my-4 mx-auto"/>
+                <li class="mt-2 text-slate-800 font-bold mb-2">¿Trabajamos por todo el país?</li>
+                <li class="text-gray-700 text-sm">No, nuestro límite es x.</li>
             </ul>
         </div>
         <hr class="border-t border-2 border-indigo-800 rounded-xl w-3/4 mx-auto"/>
@@ -207,7 +207,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                 </p>                
             </div>
             
-            <div class="bg-white border-2 border-gray-100 shadow-lg w-90 h-58 md:w-100 xl:w-120  rounded-2xl pt-4">
+            <div class="bg-white border-2 border-gray-100 shadow-lg w-90 h-60 md:w-100 xl:w-120  rounded-2xl pt-4">
                 <h4 class="tracking-wide font-bold text-center text-slate-600">Redes sociales</h4>
                 <div class="mt-10 grid grid-cols-3 gap-y-8 justify-items-center">
                 
