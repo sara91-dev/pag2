@@ -41,81 +41,46 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
     
     <div class="flex items-baseline justify-center gap-1.5 mt-12 md:mt-20 tracking-wide">
-        <p class="text-gray-800 text-xs md:text-sm">Te</p>
+        <p class="text-gray-800 text-xs md:text-sm">Quieres</p>
         
-        <p class="md:text-lg text-indigo-800 font-bold">interesa?</p>
+        <p class="md:text-lg text-indigo-800 font-bold">hablarnos?</p>
     </div>
     <div class="flex justify-center mt-4">
-        <button class="transition duration-300 ease-in-out transform hover:scale-105 bg-indigo-800 hover:bg-indigo-700 cursor-pointer border-1 border-indigo-600 px-4 py-1 rounded-full tracking-wide text-white text-sm font-bold shadow-md">Ver más</button>
+        <button class="transition duration-300 ease-in-out transform hover:scale-105 bg-indigo-800 hover:bg-indigo-700 cursor-pointer border-1 border-indigo-600 px-4 py-1 rounded-full tracking-wider text-white text-sm font-bold shadow-md">
+            !Sí!
+        </button>
     </div>
     
     
-    <div class="my-18 lg:my-24 lg:mb-26 lg:mt-30 bg-slate-900 w-full h-150 lg:h-170 flex flex-col items-center ">
-        <div class="flex flex-col items-center pt-8 tracking-wider font-bold">
-            <h1 class="flex justify-center text-xl md:text-2xl font-semibold text-gray-500 tracking-wider">
-                Noseque
-            </h1>
-            <h2 class="flex justify-center text-lg md:text-xl font-semibold text-gray-400 tracking-wider mb-4">
-                Nosequefdgfdg
-            </h2>
+    
+    
+    <div class="my-18 lg:my-24 bg-slate-900 w-full flex flex-col items-center px-4 pt-8 pb-4">
+        <div class="w-4/5 max-w-5xl mt-10 aspect-video rounded-3xl overflow-hidden shadow-2xl border border-slate-700">
+            <iframe 
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/TU_VIDEO_ID"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
         </div>
-        
-        <div class="mt-12 lg:mt-18 flex lg:flex-row items-center justify-center gap-60">
-            <div class="justify-center text-white text-center text-sm tracking-wide max-w-md">
-                
-                <div class="mt-6">
-                    <p>dsdsadsasaddssa dsdsadsasaddssa</p>
-                    <p>dsdsadsasaddssasddasdsad</p>
-                    <p>dsdsadsasaddssa</p>
-                </div>
-                <div class="mt-6">
-                    <p>dsdsadsasaddssa</p>
-                    <p>dsdsadsasaddssasddasdsad dsdsadsasaddssasddasdsad</p>
-                    <p>dsdsadsasaddsssdaa dsdsadsasaddsssdaa</p>
-                    <p>dsdsadsasaddsssdaa</p>
-                </div>
-                <div class="mt-6">
-                    <p>dsdsadsasaddssa</p>
-                    <p>dsdsadsasaddssasddasdsad dsdsadsasaddssasddasdsad</p>
-                    <p>dsdsadsasaddsssdaa dsdsadsasaddsssdaa</p>
-                    <p>dsdsadsasaddsssdaa</p>
-                </div>
-            </div>
-            
-            <div class="hidden lg:block justify-center text-white text-center text-sm tracking-wide max-w-md">
-                <div class="mt-6">
-                    <p>dsdsadsasaddssa dsdsadsasaddssa</p>
-                    <p>dsdsadsasaddssasddasdsad</p>
-                    <p>dsdsadsasaddssa</p>
-                </div>
-                <div class="mt-6">
-                    <p>dsdsadsasaddssa</p>
-                    <p>dsdsadsasaddssasddasdsad dsdsadsasaddssasddasdsad</p>
-                    <p>dsdsadsasaddsssdaa dsdsadsasaddsssdaa</p>
-                    <p>dsdsadsasaddsssdaa</p>
-                </div>
-                <div class="mt-6">
-                    <p>dsdsadsasaddssa</p>
-                    <p>dsdsadsasaddssasddasdsad dsdsadsasaddssasddasdsad</p>
-                    <p>dsdsadsasaddsssdaa dsdsadsasaddsssdaa</p>
-                    <p>dsdsadsasaddsssdaa</p>
-                </div>
-            </div>
+
+        <div class="flex justify-center mt-16 mb-12">
+            <a 
+                href="https://youtube.com"
+                target="_blank"
+                class="transition duration-300 ease-in-out transform hover:scale-105 bg-white hover:bg-indigo-500 hover:border-indigo-400 hover:text-white cursor-pointer border border-gray-100 px-5 py-2 rounded-full tracking-wide text-indigo-800 text-sm font-bold shadow-md">
+                ¡Ver más vídeos!
+            </a>
         </div>
-        
-        <div class="flex items-baseline gap-1.5 mt-8 lg:mt-20 tracking-wide">
-            <p class="text-white text-xs md:text-sm">Quieres</p>
-            <p class="md:text-lg text-white font-bold">ver más?</p>
-        </div>
-        <div class="flex justify-center mt-4">
-            <button class="transition duration-300 ease-in-out transform hover:scale-105 bg-white hover:bg-indigo-500 hover:border-indigo-400 hover:text-white cursor-pointer border-1 border-gray-100 px-4 py-1 rounded-full tracking-wide text-indigo-800 text-sm font-bold shadow-md">Ver más</button>
-        </div>
-        
     </div>
-
-
+    
+    
+    
+    
     <div class="flex flex-col items-center mt-20 md:mt-28 mb-20">
-        <h3 class="text-gray-500 text-xl font-semibold tracking-wider mb-12">Algunas características</h3>
+        <h3 class="text-gray-500 text-xl font-semibold tracking-wider mb-12">Te interesa?</h3>
             <div class="border border-white bg-slate-100 shadow-inner w-100 h-72 md:w-120 lg:w-140 xl:h-76 xl:w-160 2xl:w-180 rounded-lg">
                 <ul class="m-4 text-sm tracking-wide">
                     <li class="relative flex items-center justify-center mt-8 mb-4 mx-4 bg-slate-600 border border-slate-200 p-1.5 rounded-lg text-white font-semibold text-center">
@@ -147,12 +112,13 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                         <span>fdfsdfd</span>
                     </li>
                 </ul>
-                <button class="block mx-auto cursor-pointer mt-4 xl:mt-6 px-6 py-2 bg-gray-200 border border-gray-300 text-gray-700 font-medium rounded-full text-sm tracking-wider transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95">
-                  jojo
+                <button class="block mx-auto cursor-pointer mt-4 xl:mt-6 px-6 py-2 bg-gray-200 border border-gray-300 text-gray-700 font-semibold rounded-full text-sm tracking-wider transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95">
+                  !Háblanos!
                 </button>
             </div>
         </div>
     </div>
+    
     
     
     <div class="mt-23 mb-10">
