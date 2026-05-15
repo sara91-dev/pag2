@@ -3,6 +3,8 @@ import { renderHeader } from "./components/header";
 import { setupHeader } from "./components/header-logic";
 import { renderFooter } from "./components/footer";
 import { renderPrivacidad } from "./pages/privacidad";
+import { renderCookies } from "./pages/cookies";
+import { renderAvisoLegal } from "./pages/aviso-legal";
 
 
 function renderHome() {
@@ -335,7 +337,16 @@ function router() {
   if (path === "/pag2/privacidad") {
     renderPrivacidad();
     setupHeader();
-  } else {
+  } 
+  else if (path === "/pag2/cookies") {
+    renderCookies();
+    setupHeader();
+  }
+  else if (path === "/pag2/aviso-legal") {
+    renderAvisoLegal();
+    setupHeader();
+  }
+  else {
     renderHome();
   }
 }
