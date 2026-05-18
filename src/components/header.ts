@@ -18,13 +18,27 @@ export function renderHeader(): string {
           </ul>
         </nav>
 
-        
+                
         <li class="hidden sm:block absolute left-5 top-1.5 item-start cursor-pointer h-10 w-10 rounded-lg">
-            <img src="./logo.png" alt="logo" class="h-full w-full object-cover rounded-lg"/>
+            <a href="/" data-link class="block w-full h-full">
+                <img src="/pag2/logo.png" alt="logo" class="h-full w-full object-cover rounded-lg"/>
+            </a>
         </li>
-        <li class="hidden sm:block cursor-pointer hover:text-slate-300">Información</li>
-        <li class="hidden sm:block cursor-pointer hover:text-slate-300">Inicio</li>
-        <li class="hidden sm:block cursor-pointer hover:text-slate-300">Contacto</li>
+        <li class="hidden sm:block cursor-pointer hover:text-slate-300">
+            <a href="/pag2/informacion" data-link class="block w-full h-full">
+                Información
+            </a>
+        </li>
+        <li class="hidden sm:block cursor-pointer hover:text-slate-300">
+            <a href="/pag2/inicio" data-link class="block w-full h-full">
+                Inicio
+            </a>
+        </li>
+        <li class="hidden sm:block cursor-pointer hover:text-slate-300">
+            <a href="/pag2/contacto" data-link class="block w-full h-full">
+                Contacto
+            </a>
+        </li>
         <li class="hidden lg:block border-0 absolute right-5 top-3.5 item-start uppercase cursor-pointer bg-gray-100 px-4 py-1 text-gray-600  rounded-full font-semibold text-xs">iniciar sesión</li>
     </ul>
   </div>

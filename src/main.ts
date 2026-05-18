@@ -266,7 +266,6 @@ function setupHomeLogic() {
         current = (current + 1) % slides.length;
         slides[current].classList.remove("opacity-0");
     }, 3000);
-}
    
     
 const button = document.getElementById("emailInfoBtn") as HTMLButtonElement;
@@ -330,6 +329,7 @@ button?.addEventListener("click", async () => {
         btnText!.textContent = "¡Aceptar!";
     }
 });
+}
 
 function router() {
   const path = window.location.pathname;

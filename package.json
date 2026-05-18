@@ -16,6 +16,7 @@
     "vite": "^8.0.9"
   },
   "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@tailwindcss/vite": "^4.2.2",
     "cors": "^2.8.6",
     "express": "^5.2.1",
