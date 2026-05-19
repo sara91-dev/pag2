@@ -39,7 +39,6 @@ export function renderHeader(): string {
                 Contacto
             </a>
         </li>
-        <li class="hidden lg:block border-0 absolute right-5 top-3.5 item-start uppercase cursor-pointer bg-gray-100 px-4 py-1 text-gray-600  rounded-full font-semibold text-xs">iniciar sesión</li>
     </ul>
   </div>
 </section>

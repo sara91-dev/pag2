@@ -5,6 +5,7 @@ import { renderFooter } from "./components/footer";
 import { renderPrivacidad } from "./pages/privacidad";
 import { renderCookies } from "./pages/cookies";
 import { renderAvisoLegal } from "./pages/aviso-legal";
+import { renderFormulario } from "./pages/formulario";
 
 
 function renderHome() {
@@ -114,9 +115,9 @@ app.innerHTML = `
                             <span>Rápido</span>
                         </li>
                     </ul>
-                    <button class="block mx-auto cursor-pointer mt-6 xl:mt-6 px-6 py-2 bg-gray-200 border border-gray-300 text-gray-700 font-semibold rounded-full text-sm tracking-wider transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95">
-                      !Háblanos!
-                    </button>
+                    <a href="/pag2/formulario" data-link class="block w-fit mx-auto cursor-pointer mt-6 xl:mt-6 px-6 py-2 bg-gray-200 border border-gray-300 text-gray-700 font-semibold rounded-full text-sm tracking-wider transition-all duration-200 hover:bg-gray-300 hover:shadow-md active:scale-95">
+                      ¡Háblanos!
+                    </a>
                 </div>
             </div>
         </div>
@@ -344,6 +345,10 @@ function router() {
   }
   else if (path === "/pag2/aviso-legal") {
     renderAvisoLegal();
+    setupHeader();
+  }
+  else if (path === "/pag2/formulario") {
+    renderFormulario();
     setupHeader();
   }
   else {
