@@ -27,6 +27,11 @@ export function renderHeader(): string {
                 Contacto
               </a>
             </li>
+            <li>
+              <a href="/pag2/desarrollo" class="block px-4 py-2 rounded-lg text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-colors duration-150 active:bg-slate-200">
+                En desarrollo
+              </a>
+            </li>
           </ul>
         </nav>
 

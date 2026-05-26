@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import mailchimp from '@mailchimp/mailchimp_marketing';
+import { initDB } from './database.js';
 
 const app = express();
 const PORT = 3001;
@@ -43,6 +44,37 @@ app.post('/mandarCorreo', async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`🚀 Servidor listo en http://localhost:${PORT}`);
+
+let db; 
+
+// Iniciar servidor y base de datos a la vez
+initDB().then(database => {
+    db = database; 
+    
+    app.listen(PORT, () => {
+        console.log(`🚀 Servidor y Base de Datos listos en http://localhost:${PORT}`);
+    });
+}).catch(err => {
+    console.error("Error al iniciar la base de datos:", err);
+});
+
+// Obtener todos los productos
+app.get('/productos', async (req, res) => {
+    try {
+        const productos = await db.all('SELECT * FROM productos');
+        res.status(200).json(productos);
+    } catch (error) {
+        res.status(500).json({ error: "Error al obtener productos" });
+    }
+});
+
+// Añadir un usuario a la base de datos
+app.post('/usuarios', async (req, res) => {
+    const { nombre, email } = req.body;
+    try {
+        const result = await db.run('INSERT INTO usuarios (nombre, email) VALUES (?, ?)', [nombre, email]);
+        res.status(201).json({ id: result.lastID, nombre, email });
+    } catch (error) {
+        res.status(400).json({ error: "Error al crear usuario (quizás el email ya existe)" });
+    }
 });

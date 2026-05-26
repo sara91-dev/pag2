@@ -1,6 +1,12 @@
 import { renderHeader } from "../components/header";
 import { renderFooter } from "../components/footer";
 
+//async function cargarProductos() {
+//    const respuesta = await fetch('http://localhost:3001/productos');
+//    const productos = await respuesta.json();
+//    console.log(productos);
+//}
+
 export function renderDesarrollo() {
   const app = document.querySelector<HTMLDivElement>('#app');
 
