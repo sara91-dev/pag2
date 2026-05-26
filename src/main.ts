@@ -7,6 +7,7 @@ import { renderCookies } from "./pages/cookies";
 import { renderAvisoLegal } from "./pages/aviso-legal";
 import { renderFormulario } from "./pages/formulario";
 import { renderDesarrollo } from "./pages/desarrollo";
+import { renderCookiesBanner } from "./components/cookies-banner";
 
 
 function renderHome() {
@@ -392,8 +393,8 @@ function router() {
     else if (path === "/pag2/contacto") {
       document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
     }
-    
   }
+  renderCookiesBanner();
 }
 
 document.addEventListener("click", (e) => {
