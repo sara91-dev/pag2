@@ -2,7 +2,7 @@ export function renderHeader(): string {
   return `
 <section id="header" class="bg-slate-800/70 backdrop-blur-lg sticky top-0 z-50">
   <div class="">
-    <ul class="text-white flex justify-center gap-24 lg:gap-36 font-semibold py-6 sm:py-4 tracking-wide text-sm">
+    <ul class="text-white flex justify-center gap-12 md:gap-24 lg:gap-36 font-semibold py-6 sm:py-4 tracking-wide text-sm">
         
         <button id="menuBtn" class="sm:hidden absolute left-6 top-2 h-8 w-8 cursor-pointer bg-indigo-50 backdrop-blur-md shadow-md rounded-xl flex items-center justify-center transition-all duration-200 hover:bg-white hover:shadow-lg hover:scale-105 active:scale-95 focus:outline-none">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -36,7 +36,7 @@ export function renderHeader(): string {
             </a>
         </li>
 
-        <li class="hidden sm:block relative group py-1 text-white hover:text-slate-300 transition-colors duration-300">
+        <li class="hidden ml-12 md:ml-6 sm:block relative group py-1 text-white hover:text-slate-300 transition-colors duration-300">
             <a href="/pag2/informacion" data-link class="block w-full h-full focus:outline-none focus-visible:text-blue-400">
                 Información
             </a>
@@ -53,6 +53,13 @@ export function renderHeader(): string {
         <li class="hidden sm:block relative group py-1 text-white hover:text-slate-300 transition-colors duration-300">
             <a href="/pag2/contacto" data-link class="block w-full h-full focus:outline-none focus-visible:text-blue-400">
                 Contacto
+            </a>
+            <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-indigo-300 transition-all duration-300 group-hover:w-full"></span>
+        </li>
+        
+        <li class="hidden sm:block relative group py-1 text-white hover:text-slate-300 transition-colors duration-300">
+            <a href="/pag2/desarrollo" data-link class="block w-full h-full focus:outline-none focus-visible:text-blue-400">
+                En desarrollo
             </a>
             <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-indigo-300 transition-all duration-300 group-hover:w-full"></span>
         </li>

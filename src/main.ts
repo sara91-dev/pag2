@@ -6,6 +6,7 @@ import { renderPrivacidad } from "./pages/privacidad";
 import { renderCookies } from "./pages/cookies";
 import { renderAvisoLegal } from "./pages/aviso-legal";
 import { renderFormulario } from "./pages/formulario";
+import { renderDesarrollo } from "./pages/desarrollo";
 
 
 function renderHome() {
@@ -20,16 +21,20 @@ app.innerHTML = `
             <div class="flex items-center flex-col md:flex-row justify-center gap-10 md:gap-30 lg:gap-60 xl:gap-100 2xl:gap-120 mx-6">
                 <div class="flex flex-col justify-center animate-fade-up">
                     <h1 class=" flex justify-center text-xl md:text-2xl font-semibold tracking-wider bg-gradient-to-r from-slate-700 to-slate-400 bg-clip-text text-transparent ">
-                        Noseque
+                        G-Rebel Air
                     </h1>
-                    <h2 class="flex justify-center text-lg md:text-xl font-semibold tracking-wider mb-4 bg-gradient-to-r from-slate-500 to-slate-400 bg-clip-text text-transparent ">
-                        Nosequefdgfdg
+                    <h2 class="flex justify-center text-center text-lg md:text-xl font-semibold tracking-wider mb-4 bg-gradient-to-r from-slate-500 to-slate-400 bg-clip-text text-transparent ">
+                        Aquí te enseñamos lo que estamos probando ahora mismo enn G-Rebel Air
                     </h2>
-                    <p class="text-gray-800 text-sm lg:text-base flex justify-center">• sjddjsjdjdsj dsakaiwejd kskdak</p>
-                    <p class="text-gray-800 text-sm lg:text-base flex justify-center">• sjddjsjdjdsj dsakaiwejd kskdak fdfd dc</p>
-                    <p class="text-gray-800 text-sm lg:text-base flex justify-center">• sjddjsjdjdsj dsakaiwejd kskdak</p>
-                    <span class="mt-2 text-center px-3 py-1 mb-4 text-xs font-semibold tracking-widest text-indigo-600 uppercase bg-indigo-100 rounded-full">
-                        jjejej jojoj
+                    <div class="px-30">
+                        <p class="text-gray-800 text-sm lg:text-base flex justify-start">• ideas</p>
+                        <p class="text-gray-800 text-sm lg:text-base flex justify-start">• prototipos</p>
+                        <p class="text-gray-800 text-sm lg:text-base flex justify-start">• mejoras que todavía no están a la venta, pero que forman parte del camino</p>
+                    </div>
+                    <span class="mt-4 text-center px-3 py-1 mb-4 text-xs font-semibold tracking-widest text-indigo-600 uppercase bg-indigo-100 rounded-full">
+                        <p>No son promesas vacías.</p> 
+                        <p>Son desarrollos reales, en fase de diseño, prueba, fabricación o validación.</p> 
+                        <p>Cuando algo supere nuestras pruebas, pasará a la zona de venta.</p> 
                     </span>
                     </div>
                                         
@@ -45,7 +50,7 @@ app.innerHTML = `
         
             
             <div class="flex items-baseline justify-center gap-1.5 mt-12 md:mt-20 tracking-wide">
-                <p class="text-gray-800 text-xs md:text-sm">Quieres</p>
+                <p class="text-gray-800 text-base md:text-sm">Quieres</p>
                 
                 <p class="md:text-lg text-indigo-800 font-bold">hablarnos?</p>
             </div>
@@ -53,7 +58,7 @@ app.innerHTML = `
                 <a 
                     href="/pag2/informacion" 
                     data-link 
-                    class="inline-block text-center transition duration-300 ease-in-out transform hover:scale-105 bg-indigo-800 hover:bg-indigo-700 cursor-pointer border border-indigo-600 px-4 py-1 rounded-full tracking-wider text-white text-sm font-bold shadow-md"
+                    class="inline-block text-center transition duration-300 ease-in-out transform hover:scale-105 bg-indigo-800 hover:bg-indigo-700 cursor-pointer border border-indigo-600 px-6 py-1 rounded-full tracking-wider text-white text-sm font-bold shadow-md"
                 >
                     ¡Sí!
                 </a>
@@ -344,7 +349,8 @@ function router() {
     path === "/pag2/privacidad" ||
     path === "/pag2/cookies" ||
     path === "/pag2/aviso-legal" ||
-    path === "/pag2/formulario"
+    path === "/pag2/formulario" ||
+    path === "/pag2/desarrollo" 
   ) {
     window.scrollTo(0, 0); 
   }
@@ -363,6 +369,10 @@ function router() {
   }
   else if (path === "/pag2/formulario") {
     renderFormulario();
+    setupHeader();
+  }
+  else if (path === "/pag2/desarrollo") {
+    renderDesarrollo();
     setupHeader();
   }
   else {
