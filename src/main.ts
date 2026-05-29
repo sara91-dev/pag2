@@ -19,7 +19,7 @@ app.innerHTML = `
     <section id="body" class="mt-20 md:mt-34">
         
         <div id="hero" class="scroll-mt-34 md:scroll-mt-46">
-            <div class="flex items-center flex-col md:flex-row justify-center gap-10 md:gap-30 lg:gap-60 xl:gap-100 2xl:gap-120 mx-6">
+            <div class="flex items-center flex-col lg:flex-row justify-center gap-10 md:gap-16 xl:gap-20 2xl:gap-36 3xl:gap-0 mx-6 p-6">
                 <div class="flex flex-col justify-center animate-fade-up">
                     <h1 class=" flex justify-center text-xl md:text-2xl font-semibold tracking-wider bg-gradient-to-r from-slate-700 to-slate-400 bg-clip-text text-transparent ">
                         G-Rebel Air

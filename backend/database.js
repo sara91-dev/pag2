@@ -27,7 +27,8 @@ export async function initDB() {
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             nombre TEXT NOT NULL,
             stock INTEGER DEFAULT 0,
-            imagen TEXT
+            imagen TEXT,
+            desc TEXT
         )
     `);
     
