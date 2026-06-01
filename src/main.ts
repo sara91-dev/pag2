@@ -268,6 +268,7 @@ app.innerHTML = `
    setupHomeLogic();
 }
 
+
 function setupHomeLogic() {
 
     const slides = document.querySelectorAll(".slide");
@@ -345,7 +346,12 @@ button?.addEventListener("click", async () => {
 
 function router() {
   const path = window.location.pathname;
-
+  
+  if (path !== "/pag2/inicio" && path !== "/" && homeInterval) {
+    clearInterval(homeInterval);
+    homeInterval = null;
+  }
+  
   if (
     path === "/pag2/privacidad" ||
     path === "/pag2/cookies" ||

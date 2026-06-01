@@ -68,6 +68,13 @@ export function renderHeader(): string {
             </a>
             <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-indigo-300 transition-all duration-300 group-hover:w-full"></span>
         </li>
+
+        <li class="hidden xl:block absolute right-5">
+            <a href="/pag2/desarrollo" data-link class="block bg-white hover:bg-indigo-400 border border-gray-200 hover:border-indigo-300 py-2 px-4 rounded-full text-indigo-400 hover:text-white text-sm font-semibold transition-colors duration-300 text-center">
+                Iniciar sesión
+            </a>
+        </li>
+        
     </ul>
   </div>
 </section>
