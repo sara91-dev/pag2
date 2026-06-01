@@ -7,6 +7,7 @@ import { renderCookies } from "./pages/cookies";
 import { renderAvisoLegal } from "./pages/aviso-legal";
 import { renderFormulario } from "./pages/formulario";
 import { renderDesarrollo } from "./pages/desarrollo";
+import { renderInicioSesion } from "./pages/inicio_sesion";
 import { renderCookiesBanner } from "./components/cookies-banner";
 
 
@@ -347,17 +348,14 @@ button?.addEventListener("click", async () => {
 function router() {
   const path = window.location.pathname;
   
-  if (path !== "/pag2/inicio" && path !== "/" && homeInterval) {
-    clearInterval(homeInterval);
-    homeInterval = null;
-  }
   
   if (
     path === "/pag2/privacidad" ||
     path === "/pag2/cookies" ||
     path === "/pag2/aviso-legal" ||
     path === "/pag2/formulario" ||
-    path === "/pag2/desarrollo" 
+    path === "/pag2/desarrollo" ||
+    path === "/pag2/inicio_sesion" 
   ) {
     window.scrollTo(0, 0); 
   }
@@ -382,13 +380,16 @@ function router() {
     renderDesarrollo();
     setupHeader();
   }
+  else if (path === "/pag2/inicio_sesion") {
+    renderInicioSesion();
+    setupHeader();
+  }
   else {
     const heroSection = document.getElementById("hero");
     
     if(!heroSection){
         renderHome();
     }
-    
     
     if (path === "/pag2/inicio") {
       document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
