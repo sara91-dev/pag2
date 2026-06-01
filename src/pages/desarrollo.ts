@@ -12,21 +12,21 @@ async function cargarProductos() {
 
     contenedor.innerHTML = productos.map((producto: any) => `
       <div class="bg-white border-2 border-gray-100 shadow-lg
-                  w-100 h-50 sm:w-130 md:w-160 md:h-60 lg:w-200 lg:h-70 xl:w-240 xl:h-80 2xl:w-260 2xl:h-90
-                  p-4 rounded-2xl mb-8 md:mb-12
+                  w-100 sm:w-130 md:w-160 lg:w-200 xl:w-240 2xl:w-260
+                  p-6 rounded-2xl mb-8 md:mb-12
                   mx-auto flex flex-col">
 
-        <h2 class="text-xl text-center font-bold">
+        <h2 class="text-xl tracking-wide text-center font-bold">
           ${producto.nombre}
         </h2>
 
-        <div class="mt-8 text-center bg-black h-30 w-62 mx-auto"></div>
+        <div class="mt-8 bg-black h-50 md:h-70 w-10/12 md:w-11/12 xl:h-80 max-w-xl mx-auto rounded-lg"></div>
 
-        <p class="mt-4 text-center">
-          Descripción: ${producto.desc}
+        <p class="mt-6 text-center mb-10">
+          ${producto.desc}
         </p>
 
-        <p class="text-end mt-auto">
+        <p class="text-end text-red-500 font-semibold mt-auto">
           Stock: ${producto.stock}
         </p>
       </div>
