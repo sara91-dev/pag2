@@ -18,7 +18,8 @@ export async function initDB() {
         CREATE TABLE IF NOT EXISTS usuarios (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             nombre TEXT NOT NULL,
-            email TEXT
+            email TEXT,
+            password TEXT NOT NULL
         )
     `);
 

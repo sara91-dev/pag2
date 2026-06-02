@@ -8,6 +8,7 @@ import { renderAvisoLegal } from "./pages/aviso-legal";
 import { renderFormulario } from "./pages/formulario";
 import { renderDesarrollo } from "./pages/desarrollo";
 import { renderInicioSesion } from "./pages/inicio_sesion";
+import { renderAdministracion } from "./pages/administracion";
 import { renderCookiesBanner } from "./components/cookies-banner";
 
 
@@ -355,7 +356,8 @@ function router() {
     path === "/pag2/aviso-legal" ||
     path === "/pag2/formulario" ||
     path === "/pag2/desarrollo" ||
-    path === "/pag2/inicio_sesion" 
+    path === "/pag2/inicio_sesion" ||
+    path === "/pag2/administracion" 
   ) {
     window.scrollTo(0, 0); 
   }
@@ -382,6 +384,10 @@ function router() {
   }
   else if (path === "/pag2/inicio_sesion") {
     renderInicioSesion();
+    setupHeader();
+  }
+  else if (path === "/pag2/administracion") {
+    renderAdministracion();
     setupHeader();
   }
   else {

@@ -78,3 +78,25 @@ app.post('/usuarios', async (req, res) => {
         res.status(400).json({ error: "Error al crear usuario (quizás el email ya existe)" });
     }
 });
+
+// Endpoint de inicio de sesión
+app.post('/login', async (req, res) => {
+    const { usuario, password } = req.body;
+
+    if (!usuario || !password) {
+        return res.status(400).json({ ok: false, message: "Faltan campos obligatorios" });
+    }
+
+    try {
+        const user = await db.get('SELECT * FROM usuarios WHERE nombre = ? AND password = ?', [usuario, password]);
+
+        if (user) {
+            return res.status(200).json({ ok: true, message: "Login correcto" });
+        } else {
+            return res.status(401).json({ ok: false, message: "Usuario o contraseña incorrectos" });
+        }
+    } catch (error) {
+        console.error("Error en el login:", error);
+        return res.status(500).json({ ok: false, message: "Error interno del servidor" });
+    }
+});
