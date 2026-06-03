@@ -79,7 +79,6 @@ app.post('/usuarios', async (req, res) => {
     }
 });
 
-// Endpoint de inicio de sesión
 app.post('/login', async (req, res) => {
     const { usuario, password } = req.body;
 
@@ -91,7 +90,11 @@ app.post('/login', async (req, res) => {
         const user = await db.get('SELECT * FROM usuarios WHERE nombre = ? AND password = ?', [usuario, password]);
 
         if (user) {
-            return res.status(200).json({ ok: true, message: "Login correcto" });
+            return res.status(200).json({ 
+                ok: true, 
+                message: "Login correcto",
+                permisos: user.permisos // 
+            });
         } else {
             return res.status(401).json({ ok: false, message: "Usuario o contraseña incorrectos" });
         }

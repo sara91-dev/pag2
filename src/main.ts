@@ -387,6 +387,19 @@ function router() {
     setupHeader();
   }
   else if (path === "/pag2/administracion") {
+    const isAdmin = localStorage.getItem('is_admin') === 'true';
+
+    if (!isAdmin) {
+      alert("No tienes permisos para acceder a la administración.");
+      
+      window.history.pushState({}, "", "/pag2/inicio_sesion");
+      
+      renderInicioSesion();
+      setupHeader();
+      return; 
+    }
+
+
     renderAdministracion();
     setupHeader();
   }

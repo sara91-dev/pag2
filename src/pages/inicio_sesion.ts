@@ -70,13 +70,18 @@ function setupInicioSesionLogic() {
       const data = await res.json();
 
       if (data.ok) {
+        const tienePermisos = data.permisos === 1;
+        localStorage.setItem('is_admin', String(tienePermisos));
+        localStorage.setItem('is_logged_in', 'true'); 
+
         window.history.pushState({}, "", "/pag2/administracion");
-        
         window.dispatchEvent(new Event('popstate'));
-      } else {
-        alert(data.message || "Credenciales incorrectas");
+      }   
+      else {
+         alert(data.message || "Credenciales incorrectas");
       }
-    } catch (err) {
+    } 
+    catch (err) {
       alert("Error al conectar con el servidor.");
     }
   });
