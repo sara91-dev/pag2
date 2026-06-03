@@ -20,7 +20,7 @@ export function renderFormulario() {
             Formulario
           </h1>
           <div class="flex justify-center mb-10">
-              <div class="w-20 h-1 bg-gray-400 rounded-full"></div>
+              <div class="w-20 h-1 bg-indigo-200 rounded-full"></div>
           </div>
 
           <form class="space-y-6">
@@ -31,7 +31,7 @@ export function renderFormulario() {
               </label>
               <input 
                 type="text"
-                class="text-sm text-center w-full border border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                class="text-sm text-center w-full border border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                 placeholder="Escribe tu nombre"
               />
             </div>
@@ -42,7 +42,7 @@ export function renderFormulario() {
               </label>
               <input 
                 type="email"
-                class="w-full text-sm text-center border border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                class="w-full text-sm text-center border border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                 placeholder="correo@ejemplo.com"
               />
             </div>
@@ -53,14 +53,14 @@ export function renderFormulario() {
               </label>
               <textarea
                 rows="5"
-                class="text-center text-sm w-full border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                class="text-center text-sm w-full border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                 placeholder="Escribe tu mensaje..."
               ></textarea>
             </div>
             <div class="flex justify-center">
                 <button
                   type="submit"
-                  class="tracking-wide px-6 bg-gray-600/50 border border-gray-300 shadow-md hover:bg-blue-700 text-white font-semibold py-1 rounded-full transition"
+                  class="cursor-pointer tracking-wide px-6 bg-indigo-600/70 hover:bg-indigo-600/50 border border-gray-300 shadow-md text-white font-semibold py-1 rounded-full transition"
                 >
                   Enviar
                 </button>

@@ -9,7 +9,10 @@ export function renderInicioSesion() {
         <div class="text-left">
           <div class="bg-white rounded-2xl shadow-lg p-10 px-12 pb-12 w-full mx-auto">
             <form id="loginForm" class="flex flex-col gap-6 w-full">
-                <h1 class="text-center uppercase mb-8 tracking-wider text-2xl font-semibold text-slate-500">Inicio de sesión</h1>
+                <h1 class="text-center uppercase mb-2 tracking-wider text-2xl font-semibold text-slate-500">Inicio de sesión</h1>
+                <div class="flex justify-center mb-8">
+                    <div class="w-20 h-1 bg-indigo-200 rounded-full"></div>
+                </div>
                 <div class="flex flex-col gap-2">
                     <label for="usuario" class="text-sm font-medium text-gray-700">Usuario</label>
                     <input 
@@ -17,7 +20,7 @@ export function renderInicioSesion() {
                         id="usuario" 
                         name="usuario" 
                         placeholder="Introduce tu usuario" 
-                        class="border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                        class="border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-400"
                         required>
                 </div>
 
@@ -28,13 +31,13 @@ export function renderInicioSesion() {
                         id="password" 
                         name="password" 
                         placeholder="Introduce tu contraseña" 
-                        class="border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                        class="border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-1 focus:ring-indigo-400"
                         required>
                 </div>
 
                 <button 
                     type="submit" 
-                    class="self-center cursor-pointer bg-blue-600 text-white font-semibold py-2.5 px-8 rounded-full hover:bg-blue-700 transition-colors mt-4">
+                    class="self-center cursor-pointer bg-indigo-600/80 text-white font-semibold py-2.5 px-8 rounded-full hover:bg-indigo-600/60 transition-colors mt-4">
                     Iniciar Sesión
                 </button>
             </form>
