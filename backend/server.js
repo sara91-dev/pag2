@@ -58,7 +58,8 @@ initDB().then(database => {
     console.error("Error al iniciar la base de datos:", err);
 });
 
-// Obtener todos los productos
+// productos
+
 app.get('/productos', async (req, res) => {
     try {
         const productos = await db.all('SELECT * FROM productos');
@@ -68,7 +69,44 @@ app.get('/productos', async (req, res) => {
     }
 });
 
-// Añadir un usuario a la base de datos
+app.post('/productos', async (req, res) => {
+    const { nombre, desc, stock } = req.body;
+
+    if (!nombre || !desc || stock === undefined) {
+        return res.status(400).json({ error: "Faltan campos obligatorios (nombre, desc, stock)" });
+    }
+
+    try {
+        const result = await db.run(
+            'INSERT INTO productos (nombre, desc, stock) VALUES (?, ?, ?)',
+            [nombre, desc, parseInt(stock)]
+        );
+        res.status(201).json({ id: result.lastID, nombre, desc, stock });
+    } catch (error) {
+        console.error("Error al crear producto:", error);
+        res.status(500).json({ error: "Error al insertar el producto en la base de datos" });
+    }
+});
+
+app.delete('/productos/:id', async (req, res) => {
+    const { id } = req.params; // Obtenemos el ID desde la URL dinámica
+
+    try {
+        const result = await db.run('DELETE FROM productos WHERE id = ?', [id]);
+        
+        if (result.changes === 0) {
+            return res.status(404).json({ error: "El producto no existe" });
+        }
+
+        res.status(200).json({ ok: true, message: `Producto con ID ${id} eliminado con éxito` });
+    } catch (error) {
+        console.error("Error al borrar producto:", error);
+        res.status(500).json({ error: "Error al intentar eliminar el producto" });
+    }
+});
+
+// usuarios
+
 app.post('/usuarios', async (req, res) => {
     const { nombre, email } = req.body;
     try {
@@ -78,6 +116,7 @@ app.post('/usuarios', async (req, res) => {
         res.status(400).json({ error: "Error al crear usuario (quizás el email ya existe)" });
     }
 });
+ 
 
 app.post('/login', async (req, res) => {
     const { usuario, password } = req.body;
@@ -93,7 +132,7 @@ app.post('/login', async (req, res) => {
             return res.status(200).json({ 
                 ok: true, 
                 message: "Login correcto",
-                permisos: user.permisos // 
+                permisos: user.permisos 
             });
         } else {
             return res.status(401).json({ ok: false, message: "Usuario o contraseña incorrectos" });

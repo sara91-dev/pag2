@@ -9,7 +9,7 @@ export function renderInicioSesion() {
         <div class="text-left">
           <div class="bg-white rounded-2xl shadow-lg p-10 px-12 pb-12 w-full mx-auto">
             <form id="loginForm" class="flex flex-col gap-6 w-full">
-                <h1 class="text-center uppercase mb-2 tracking-wider text-2xl font-semibold text-slate-500">Inicio de sesión</h1>
+                <h1 class="text-center uppercase tracking-wider text-2xl font-semibold text-slate-500">Inicio de sesión</h1>
                 <div class="flex justify-center mb-8">
                     <div class="w-20 h-1 bg-indigo-200 rounded-full"></div>
                 </div>
