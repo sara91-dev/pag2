@@ -32,11 +32,6 @@ export function renderHeader(): string {
                 En desarrollo
               </a>
             </li>
-            <li>
-              <a href="/pag2/inicio_sesion" class="block px-4 py-2 rounded-lg text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-colors duration-150 active:bg-slate-200">
-                Inicio sesión
-              </a>
-            </li>
           </ul>
         </nav>
 
@@ -72,12 +67,6 @@ export function renderHeader(): string {
                 En desarrollo
             </a>
             <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-indigo-300 transition-all duration-300 group-hover:w-full"></span>
-        </li>
-
-        <li class="hidden xl:block absolute right-5">
-            <a href="/pag2/inicio_sesion" data-link class="block bg-white hover:bg-indigo-400 border border-gray-200 hover:border-indigo-300 py-2 px-4 rounded-full text-indigo-400 hover:text-white text-sm font-semibold transition-colors duration-300 text-center">
-                Iniciar sesión
-            </a>
         </li>
 
     </ul>

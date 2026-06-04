@@ -7,8 +7,6 @@ import { renderCookies } from "./pages/cookies";
 import { renderAvisoLegal } from "./pages/aviso-legal";
 import { renderFormulario } from "./pages/formulario";
 import { renderDesarrollo } from "./pages/desarrollo";
-import { renderInicioSesion } from "./pages/inicio_sesion";
-import { renderAdministracion } from "./pages/administracion";
 import { renderCookiesBanner } from "./components/cookies-banner";
 
 
@@ -282,69 +280,6 @@ function setupHomeLogic() {
         slides[current].classList.remove("opacity-0");
     }, 3000);
    
-    
-const button = document.getElementById("emailInfoBtn") as HTMLButtonElement;
-const emailInput = document.getElementById("emailInput") as HTMLInputElement;
-const errorMsg = document.getElementById("errorMsg");
-const successMsg = document.getElementById("successMsg");
-const spinner = document.getElementById("spinner");
-const btnText = document.getElementById("btnText");
-
-button?.addEventListener("click", async () => {
-    const email = emailInput.value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    errorMsg?.classList.add("hidden");
-    successMsg?.classList.add("hidden");
-
-    if (!email || !emailRegex.test(email)) {
-        emailInput.blur();
-        errorMsg?.classList.remove("hidden");
-        
-        emailInput.classList.add("border-red-500", "ring-2", "ring-red-200", "animate-shake");
-
-        setTimeout(() => {
-            errorMsg?.classList.add("hidden");
-            emailInput.classList.remove("border-red-500", "ring-red-200", "ring-2", "animate-shake");
-        }, 3000);
-        
-        emailInput.blur();
-        return;
-    }
-
-    button.disabled = true;
-    spinner?.classList.remove("hidden");
-    btnText!.textContent = "Enviando...";
-
-    try {
-        const res = await fetch("http://localhost:3001/mandarCorreo", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email })
-        });
-
-        const data = await res.json();
-
-        if (data.ok) {
-            successMsg?.classList.remove("hidden");
-            emailInput.value = ""; 
-
-            setTimeout(() => {
-                successMsg?.classList.add("hidden");
-            }, 3000);
-
-        } else {
-            alert("Algo salió mal en el servidor.");
-        }
-    } catch (err) {
-        alert("Error de conexión. ¿Encendiste el servidor?");
-    } finally {
-        button.disabled = false;
-        spinner?.classList.add("hidden");
-        btnText!.textContent = "¡Aceptar!";
-    }
-});
-}
 
 function router() {
   const path = window.location.pathname;
@@ -355,9 +290,7 @@ function router() {
     path === "/pag2/cookies" ||
     path === "/pag2/aviso-legal" ||
     path === "/pag2/formulario" ||
-    path === "/pag2/desarrollo" ||
-    path === "/pag2/inicio_sesion" ||
-    path === "/pag2/administracion" 
+    path === "/pag2/desarrollo" 
   ) {
     window.scrollTo(0, 0); 
   }
@@ -382,27 +315,7 @@ function router() {
     renderDesarrollo();
     setupHeader();
   }
-  else if (path === "/pag2/inicio_sesion") {
-    renderInicioSesion();
-    setupHeader();
-  }
-  else if (path === "/pag2/administracion") {
-    const isAdmin = localStorage.getItem('is_admin') === 'true';
 
-    if (!isAdmin) {
-      alert("No tienes permisos para acceder a la administración.");
-      
-      window.history.pushState({}, "", "/pag2/inicio_sesion");
-      
-      renderInicioSesion();
-      setupHeader();
-      return; 
-    }
-
-
-    renderAdministracion();
-    setupHeader();
-  }
   else {
     const heroSection = document.getElementById("hero");
     
