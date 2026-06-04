@@ -211,11 +211,11 @@ app.innerHTML = `
                         </div>
                         
                         <div class=" w-10 h-10 rounded-lg flex justify-center items-center">
-                            <a href="" class="group cursor-not-allowed flex flex-col items-center gap-0.5">
-                                <div class="bg-gray-400 p-2.5 rounded-xl shadow-md ">
+                            <a class="group cursor-not-allowed flex flex-col items-center gap-0.5">
+                                <div class="bg-gray-300 p-2.5 rounded-xl shadow-md ">
                                     <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24"><path d="M12 .5C5.73.5.75 5.7.75 12c0 5.1 3.29 9.42 7.86 10.95.58.1.79-.25.79-.56v-2.1c-3.2.7-3.87-1.4-3.87-1.4-.53-1.3-1.3-1.65-1.3-1.65-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.8 2.73 1.3 3.4 1 .1-.77.4-1.3.73-1.6-2.55-.3-5.23-1.3-5.23-5.7 0-1.3.45-2.3 1.2-3.1-.1-.3-.52-1.5.12-3.1 0 0 1-.3 3.3 1.2a11.2 11.2 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.64 1.6.22 2.8.12 3.1.75.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.3.75 1 .75 2.1v3.1c0 .3.2.65.8.55A10.8 10.8 0 0 0 23.25 12C23.25 5.7 18.27.5 12 .5z"/></svg>
                                 </div>
-                                <span class="text-[10px] font-bold text-gray-400 ">GITHUB</span>
+                                <span class="cursor-not-allowed text-[10px] font-bold text-gray-300 ">GITHUB</span>
                             </a>
                         </div>
                         
@@ -229,29 +229,29 @@ app.innerHTML = `
                         </div>
                         
                         <div class="w-10 h-10 rounded-lg flex justify-center items-center">
-                            <a href="" class="group cursor-not-allowed flex flex-col items-center gap-0.5">
-                                <div class="bg-gray-400 p-2.5 rounded-xl shadow-md">
+                            <a class="group cursor-not-allowed flex flex-col items-center gap-0.5">
+                                <div class="bg-gray-300 p-2.5 rounded-xl shadow-md">
                                     <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24"><path d="M16.6 1c.3 2.6 1.8 4.2 4.4 4.4v3.1c-1.8.1-3.4-.4-4.4-1.3v7.3c0 3.7-3 6.8-6.8 6.8S3 18.2 3 14.5 6 7.7 9.8 7.7c.5 0 1 .1 1.5.2v3.5c-.5-.2-1-.3-1.5-.3-1.8 0-3.3 1.5-3.3 3.3s1.5 3.3 3.3 3.3 3.4-1.5 3.4-3.3V1h3.4z"/></svg>
                                 </div>
-                                <span class="text-[10px] font-bold text-gray-400 ">TIKTOK</span>
+                                <span class="cursor-not-allowed text-[10px] font-bold text-gray-300 ">TIKTOK</span>
                             </a>
                         </div>
                         
                         <div class="w-10 h-10 rounded-lg flex justify-center items-center">
-                            <a href="" class="group cursor-not-allowed flex flex-col items-center gap-0.5">
-                                <div class="bg-gray-400 p-2.5 rounded-xl shadow-md">
+                            <a class="group cursor-not-allowed flex flex-col items-center gap-0.5">
+                                <div class="bg-gray-300 p-2.5 rounded-xl shadow-md">
                                     <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-3h2.4V9.3c0-2.4 1.4-3.7 3.6-3.7 1 0 2 .1 2 .1v2.3h-1.1c-1.1 0-1.5.7-1.5 1.4V12H16l-.5 3h-2v7A10 10 0 0 0 22 12z"/></svg>
                                 </div>
-                                <span class="text-[10px] font-bold text-gray-400">FACEBOOK</span>
+                                <span class="cursor-not-allowed text-[10px] font-bold text-gray-300">FACEBOOK</span>
                             </a>
                         </div>
                         
                         <div class="w-10 h-10 rounded-lg flex justify-center items-center">
-                            <a href="" class="group cursor-not-allowed flex flex-col items-center gap-0.5">
-                                <div class="bg-gray-400 p-2.5 rounded-xl shadow-md">
+                            <a class="group cursor-not-allowed flex flex-col items-center gap-0.5">
+                                <div class="bg-gray-300 p-2.5 rounded-xl shadow-md">
                                     <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24"><path d="M18.244 2H21.5l-7.59 8.694L22 22h-6.828l-5.34-6.918L3.8 22H.5l8.02-9.19L2 2h6.95l4.79 6.2L18.244 2zm-1.2 18h1.9L6.1 4h-2L17.044 20z"/></svg>
                                 </div>
-                                <span class="text-[10px] font-bold text-gray-400">X/TWITTER</span>
+                                <span class="text-[10px] font-bold text-gray-300">X/TWITTER</span>
                             </a>
                         </div>
                     

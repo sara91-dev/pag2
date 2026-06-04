@@ -35,7 +35,7 @@ export function renderHeader(): string {
           </ul>
         </nav>
 
-        <li class="hidden sm:block absolute left-5 top-1.5 h-10 w-10 rounded-lg transition-transform duration-200 hover:scale-105">
+        <li class="hidden sm:block absolute left-5 top-2.5 h-10 w-10 rounded-lg transition-transform duration-200 hover:scale-105">
             <a href="/" data-link class="block w-full h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded-lg">
                 <img src="/pag2/logo.png" alt="logo" class="h-full w-full object-cover rounded-lg"/>
             </a>
