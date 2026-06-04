@@ -21,7 +21,7 @@ export function renderDesarrollo() {
                     
                     <div class="w-full aspect-[21/9] bg-gray-200">
                         <img 
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80" 
+                          src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1200&q=80" 
                           alt="Producto1" 
                           class="w-full h-full object-cover"
                         />
@@ -36,7 +36,7 @@ export function renderDesarrollo() {
                 <div class="bg-white rounded-2xl max-w-sm md:max-w-2xl mx-auto w-full overflow-hidden shadow-lg">
                     <div class="w-full aspect-[21/9] bg-gray-200">
                         <img 
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80" 
+                          src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1200&q=80" 
                           alt="Producto1" 
                           class="w-full h-full object-cover"
                         />
@@ -50,7 +50,7 @@ export function renderDesarrollo() {
                 <div class="bg-white rounded-2xl max-w-sm md:max-w-2xl mx-auto w-full overflow-hidden shadow-lg">
                     <div class="w-full aspect-[21/9] bg-gray-200">
                         <img 
-                          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80" 
+                          src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1200&q=80" 
                           alt="Producto1" 
                           class="w-full h-full object-cover"
                         />
