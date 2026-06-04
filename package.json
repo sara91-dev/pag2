@@ -16,12 +16,8 @@
     "vite": "^8.0.9"
   },
   "dependencies": {
-    "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.2.2",
-    "cors": "^2.8.6",
-    "express": "^5.2.1",
-    "lucide-react": "^1.14.0",
-    "sqlite": "^5.1.1",
-    "sqlite3": "^6.0.1"
+    "lucide-react": "^1.14.0"
   }
 }

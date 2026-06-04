@@ -1,4 +1,5 @@
 import './style.css'
+import emailjs from '@emailjs/browser';
 import { renderHeader } from "./components/header";
 import { setupHeader } from "./components/header-logic";
 import { renderFooter } from "./components/footer";
@@ -279,7 +280,56 @@ function setupHomeLogic() {
         current = (current + 1) % slides.length;
         slides[current].classList.remove("opacity-0");
     }, 3000);
-   
+
+    const emailInput = document.getElementById("emailInput") as HTMLInputElement;
+    const emailBtn = document.getElementById("emailInfoBtn");
+    const errorMsg = document.getElementById("errorMsg");
+    const successMsg = document.getElementById("successMsg");
+    const spinner = document.getElementById("spinner");
+    const btnText = document.getElementById("btnText");
+
+    if (emailBtn && emailInput) {
+        emailBtn.addEventListener("click", () => {
+            const emailValue = emailInput.value.trim();
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailValue)) {
+                errorMsg?.classList.remove("hidden");
+                return;
+            }
+            errorMsg?.classList.add("hidden");
+
+            spinner?.classList.remove("hidden");
+            btnText?.classList.add("hidden");
+            emailBtn.setAttribute("disabled", "true");
+
+            const templateParams = {
+                user_email: emailValue, 
+                reply_to: "tu-correo-de-soporte@gmail.com"
+            };
+
+
+            emailjs.send('TU_SERVICE_ID', 'TU_TEMPLATE_ID', templateParams)
+                .then(() => {
+                    spinner?.classList.add("hidden");
+                    btnText?.classList.remove("hidden");
+                    successMsg?.classList.remove("hidden");
+                    emailInput.value = ""; 
+                    
+                    setTimeout(() => successMsg?.classList.add("hidden"), 5000);
+                })
+                .catch((error: any) => {
+                    console.error("Error al enviar:", error);
+                    alert("Hubo un problema al procesar tu solicitud. Inténtalo más tarde.");
+                    spinner?.classList.add("hidden");
+                    btnText?.classList.remove("hidden");
+                })
+                .finally(() => {
+                    emailBtn.removeAttribute("disabled");
+                });
+        });
+    }
+}   
 
 function router() {
   const path = window.location.pathname;

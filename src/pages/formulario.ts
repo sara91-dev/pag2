@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import { renderHeader } from "../components/header";
 import { renderFooter } from "../components/footer";
 
@@ -23,7 +24,7 @@ export function renderFormulario() {
               <div class="w-20 h-1 bg-indigo-200 rounded-full"></div>
           </div>
 
-          <form class="space-y-6">
+          <form id="contactForm" class="space-y-6">
 
             <div>
               <label class="text-end mr-4 block text-sm font-medium text-gray-700 mb-1">
@@ -31,6 +32,8 @@ export function renderFormulario() {
               </label>
               <input 
                 type="text"
+                id="formName"
+                required
                 class="text-sm text-center w-full border border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                 placeholder="Escribe tu nombre"
               />
@@ -42,6 +45,8 @@ export function renderFormulario() {
               </label>
               <input 
                 type="email"
+                id="formEmail"
+                required
                 class="w-full text-sm text-center border border-gray-300 rounded-full px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                 placeholder="correo@ejemplo.com"
               />
@@ -52,14 +57,20 @@ export function renderFormulario() {
                 Mensaje
               </label>
               <textarea
+                id="formMessage"
                 rows="5"
-                class="text-center text-sm w-full border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                required
+                class="text-center text-sm w-full border border-gray-300 rounded-2xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-300"
                 placeholder="Escribe tu mensaje..."
               ></textarea>
             </div>
+
+            <div class="text-center text-sm font-semibold hidden" id="formStatusMsg"></div>
+
             <div class="flex justify-center">
                 <button
                   type="submit"
+                  id="formSubmitBtn"
                   class="cursor-pointer tracking-wide px-6 bg-indigo-600/70 hover:bg-indigo-600/50 border border-gray-300 shadow-md text-white font-semibold py-1 rounded-full transition"
                 >
                   Enviar
@@ -75,4 +86,59 @@ export function renderFormulario() {
     ${renderFooter()}
   </div>
 `;
+
+
+  setupFormularioLogic();
+}
+
+
+function setupFormularioLogic() {
+  const form = document.getElementById("contactForm") as HTMLFormElement;
+  const nameInput = document.getElementById("formName") as HTMLInputElement;
+  const emailInput = document.getElementById("formEmail") as HTMLInputElement;
+  const messageInput = document.getElementById("formMessage") as HTMLTextAreaElement;
+  const submitBtn = document.getElementById("formSubmitBtn") as HTMLButtonElement;
+  const statusMsg = document.getElementById("formStatusMsg");
+
+  if (!form) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); 
+    
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Enviando...";
+    }
+
+    const templateParams = {
+      from_name: nameInput.value.trim(),
+      user_email: emailInput.value.trim(),
+      message: messageInput.value.trim(),
+    };
+
+    emailjs.send('TU_SERVICE_ID', 'TU_TEMPLATE_ID_DEL_FORMULARIO', templateParams)
+      .then(() => {
+        if (statusMsg) {
+          statusMsg.textContent = "✓ ¡Mensaje enviado con éxito!";
+          statusMsg.className = "text-center text-sm font-semibold text-green-600 block";
+        }
+        form.reset(); 
+      })
+      .catch((error) => {
+        console.error("Error al enviar el formulario:", error);
+        if (statusMsg) {
+          statusMsg.textContent = "✕ Error al enviar el mensaje. Inténtalo de nuevo.";
+          statusMsg.className = "text-center text-sm font-semibold text-red-500 block";
+        }
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerText = "Enviar";
+        }
+        setTimeout(() => {
+          statusMsg?.classList.add("hidden");
+        }, 5000);
+      });
+  });
 }
