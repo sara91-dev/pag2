@@ -189,7 +189,7 @@ function mostrarFormularioCrear(contenedor: HTMLElement) {
         });
       } catch (error) {
         console.error('Error al procesar el archivo de imagen:', error);
-        alert('Hubo un problema al cargar tu archivo local.');
+        alert('Hubo un problema al cargar tu archivo.');
         return;
       }
     }
@@ -209,7 +209,7 @@ function mostrarFormularioCrear(contenedor: HTMLElement) {
       });
 
       if (respuesta.ok) {
-        alert('🎉 ¡Producto añadido con éxito con tu imagen local!');
+        alert('🎉 ¡Producto añadido con éxito!');
         const tabVer = document.getElementById('tab-ver');
         tabVer?.click();
       } else {
